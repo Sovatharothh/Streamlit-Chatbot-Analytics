@@ -15,9 +15,8 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 llm = GoogleGemini(api_key=openai.api_key)
 
-# streamlit web app configuration
+# Streamlit web app configuration
 st.title("AUPPSearch")
-
 
 # Initialize conversation history in session state
 if "conversation" not in st.session_state:
@@ -80,8 +79,12 @@ if prompt:
             # Display assistant's message
             with st.chat_message("assistant"):
                 st.markdown(response)
+
+            # Check if a figure was generated before displaying it
+            if plt.get_fignums(): 
                 fig_to_plot = plt.gcf()
-                st.pyplot(fig = fig_to_plot)
+                st.pyplot(fig=fig_to_plot)
+                # plt.clf()  
         except Exception as e:
             error_message = f"Error: {e}"
             st.session_state.conversation.append({"role": "assistant", "content": error_message})

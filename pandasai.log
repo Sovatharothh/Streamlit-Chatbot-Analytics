@@ -10265,3 +10265,3063 @@ result = {'type': 'string', 'value': f'The happiest country is {highest_happines
 2025-01-04 12:04:09 [INFO] Executing Step 7: ResultValidation
 2025-01-04 12:04:09 [INFO] Answer: {'type': 'string', 'value': 'The happiest country is Finland.'}
 2025-01-04 12:04:09 [INFO] Executing Step 8: ResultParsing
+2025-01-04 12:14:59 [INFO] Question: give me summarize of the dataset 
+2025-01-04 12:14:59 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:14:59 [INFO] Prompt ID: 4db2af6b-ffcb-4ec1-af0d-902b59aa8162
+2025-01-04 12:14:59 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:14:59 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:14:59 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:14:59 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:14:59 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+124,1,2,"Boulos, Mr. Hanna",female,,1,3,349225,13.8583,,C
+541,1,1,"Crosby, Capt. Edward Gifford",male,74.0,5,4,8475,108.9,B86,
+558,0,3,"Baclini, Miss. Eugenie",female,27.0,4,2,35281,8.05,C110,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me summarize of the dataset 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:14:59 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:15:01 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+124,1,2,"Boulos, Mr. Hanna",female,,1,3,349225,13.8583,,C
+541,1,1,"Crosby, Capt. Edward Gifford",male,74.0,5,4,8475,108.9,B86,
+558,0,3,"Baclini, Miss. Eugenie",female,27.0,4,2,35281,8.05,C110,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me summarize of the dataset 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:15:01 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+dfs[0].info()
+
+# Declare result var: 
+result = { "type": "dataframe", "value": dfs[0].info() }
+            ```
+            
+2025-01-04 12:15:01 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:15:01 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:15:01 [INFO] 
+Code running:
+```
+dfs[0].info()
+result = {'type': 'dataframe', 'value': dfs[0].info()}
+        ```
+2025-01-04 12:15:01 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:15:02 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+2025-01-04 12:15:02 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-04 12:15:02 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:15:02 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:15:02 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+124,1,2,"Boulos, Mr. Hanna",female,,1,3,349225,13.8583,,C
+541,1,1,"Crosby, Capt. Edward Gifford",male,74.0,5,4,8475,108.9,B86,
+558,0,3,"Baclini, Miss. Eugenie",female,27.0,4,2,35281,8.05,C110,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me summarize of the dataset 
+
+You generated this python code:
+dfs[0].info()
+result = {'type': 'dataframe', 'value': dfs[0].info()}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:15:02 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:15:03 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+124,1,2,"Boulos, Mr. Hanna",female,,1,3,349225,13.8583,,C
+541,1,1,"Crosby, Capt. Edward Gifford",male,74.0,5,4,8475,108.9,B86,
+558,0,3,"Baclini, Miss. Eugenie",female,27.0,4,2,35281,8.05,C110,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me summarize of the dataset 
+
+You generated this python code:
+dfs[0].info()
+result = {'type': 'dataframe', 'value': dfs[0].info()}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:15:03 [INFO] Code generated:
+            ```
+            result = {'type': 'dataframe', 'value': dfs[0].info().__dict__}
+            ```
+            
+2025-01-04 12:15:03 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:15:03 [ERROR] Pipeline failed on step 2: Access to private attribute '__dict__' is not allowed.
+2025-01-04 12:15:03 [ERROR] Pipeline failed on step 6: Access to private attribute '__dict__' is not allowed.
+2025-01-04 12:16:45 [INFO] Question: summarize me the dataset
+2025-01-04 12:16:45 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:16:45 [INFO] Prompt ID: f5133159-169e-4a8e-a31c-088de19d3992
+2025-01-04 12:16:45 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:16:45 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:16:45 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:16:45 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:16:45 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+237,0,3,"Sawyer, Mr. Frederick Charles",male,,4,4,349208,7.25,,S
+97,0,1,"Nakid, Miss. Maria (""Mary"")",female,26.0,0,2,2926,8.0292,C50,C
+55,1,2,"Silvey, Mrs. William Baird (Alice Munger)",male,40.0,1,6,248747,26.55,E101,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ summarize me the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:16:45 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:16:47 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+237,0,3,"Sawyer, Mr. Frederick Charles",male,,4,4,349208,7.25,,S
+97,0,1,"Nakid, Miss. Maria (""Mary"")",female,26.0,0,2,2926,8.0292,C50,C
+55,1,2,"Silvey, Mrs. William Baird (Alice Munger)",male,40.0,1,6,248747,26.55,E101,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ summarize me the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:16:47 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+dfs[0].info()
+
+# Declare result var: 
+result = { "type": "dataframe", "value": dfs[0].info() }
+            ```
+            
+2025-01-04 12:16:47 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:16:47 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:16:47 [INFO] 
+Code running:
+```
+dfs[0].info()
+result = {'type': 'dataframe', 'value': dfs[0].info()}
+        ```
+2025-01-04 12:16:47 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:16:47 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+2025-01-04 12:16:47 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-04 12:16:47 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:16:47 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:16:47 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+237,0,3,"Sawyer, Mr. Frederick Charles",male,,4,4,349208,7.25,,S
+97,0,1,"Nakid, Miss. Maria (""Mary"")",female,26.0,0,2,2926,8.0292,C50,C
+55,1,2,"Silvey, Mrs. William Baird (Alice Munger)",male,40.0,1,6,248747,26.55,E101,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ summarize me the dataset
+
+You generated this python code:
+dfs[0].info()
+result = {'type': 'dataframe', 'value': dfs[0].info()}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:16:47 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:16:48 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+237,0,3,"Sawyer, Mr. Frederick Charles",male,,4,4,349208,7.25,,S
+97,0,1,"Nakid, Miss. Maria (""Mary"")",female,26.0,0,2,2926,8.0292,C50,C
+55,1,2,"Silvey, Mrs. William Baird (Alice Munger)",male,40.0,1,6,248747,26.55,E101,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ summarize me the dataset
+
+You generated this python code:
+dfs[0].info()
+result = {'type': 'dataframe', 'value': dfs[0].info()}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:16:48 [INFO] Code generated:
+            ```
+            result = {'type': 'dataframe', 'value': dfs[0].info(verbose=False)}
+            ```
+            
+2025-01-04 12:16:48 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:16:48 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0].info(verbose=False)}
+        ```
+2025-01-04 12:16:48 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+2025-01-04 12:16:48 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-04 12:16:48 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:16:48 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:16:48 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+237,0,3,"Sawyer, Mr. Frederick Charles",male,,4,4,349208,7.25,,S
+97,0,1,"Nakid, Miss. Maria (""Mary"")",female,26.0,0,2,2926,8.0292,C50,C
+55,1,2,"Silvey, Mrs. William Baird (Alice Munger)",male,40.0,1,6,248747,26.55,E101,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ summarize me the dataset
+
+You generated this python code:
+result = {'type': 'dataframe', 'value': dfs[0].info(verbose=False)}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:16:48 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:16:49 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+237,0,3,"Sawyer, Mr. Frederick Charles",male,,4,4,349208,7.25,,S
+97,0,1,"Nakid, Miss. Maria (""Mary"")",female,26.0,0,2,2926,8.0292,C50,C
+55,1,2,"Silvey, Mrs. William Baird (Alice Munger)",male,40.0,1,6,248747,26.55,E101,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ summarize me the dataset
+
+You generated this python code:
+result = {'type': 'dataframe', 'value': dfs[0].info(verbose=False)}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:16:49 [INFO] Code generated:
+            ```
+            result = {'type': 'dataframe', 'value': dfs[0].info()}
+            ```
+            
+2025-01-04 12:16:49 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:16:49 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0].info()}
+        ```
+2025-01-04 12:16:49 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+2025-01-04 12:16:49 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-04 12:16:49 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:16:49 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:16:50 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+237,0,3,"Sawyer, Mr. Frederick Charles",male,,4,4,349208,7.25,,S
+97,0,1,"Nakid, Miss. Maria (""Mary"")",female,26.0,0,2,2926,8.0292,C50,C
+55,1,2,"Silvey, Mrs. William Baird (Alice Munger)",male,40.0,1,6,248747,26.55,E101,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ summarize me the dataset
+
+You generated this python code:
+result = {'type': 'dataframe', 'value': dfs[0].info()}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:16:50 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:16:51 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+237,0,3,"Sawyer, Mr. Frederick Charles",male,,4,4,349208,7.25,,S
+97,0,1,"Nakid, Miss. Maria (""Mary"")",female,26.0,0,2,2926,8.0292,C50,C
+55,1,2,"Silvey, Mrs. William Baird (Alice Munger)",male,40.0,1,6,248747,26.55,E101,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ summarize me the dataset
+
+You generated this python code:
+result = {'type': 'dataframe', 'value': dfs[0].info()}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:16:51 [INFO] Code generated:
+            ```
+            result = {'type': 'dataframe', 'value': dfs[0].info(verbose=False)}
+            ```
+            
+2025-01-04 12:16:51 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:16:51 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0].info(verbose=False)}
+        ```
+2025-01-04 12:16:51 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'NoneType'> must match with type dataframe
+
+2025-01-04 12:16:51 [ERROR] Pipeline failed on step 6: Value type <class 'NoneType'> must match with type dataframe
+2025-01-04 12:18:24 [INFO] Question: give me summarize of the dataset
+2025-01-04 12:18:24 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:18:24 [INFO] Prompt ID: 7ab24c13-fd3d-4904-b544-dddab20bc387
+2025-01-04 12:18:24 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:18:24 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:18:24 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:18:24 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:18:24 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+732,1,3,"Barkworth, Mr. Algernon Henry Wilson",female,32.5,2,3,2650,26.25,C86,S
+601,0,1,"Shutes, Miss. Elizabeth W",female,,0,2,PC 17318,23.0,,
+808,0,2,"Clifford, Mr. George Quincy",male,32.0,3,4,PC 17483,59.4,C62 C64,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me summarize of the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:18:24 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:18:26 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+732,1,3,"Barkworth, Mr. Algernon Henry Wilson",female,32.5,2,3,2650,26.25,C86,S
+601,0,1,"Shutes, Miss. Elizabeth W",female,,0,2,PC 17318,23.0,,
+808,0,2,"Clifford, Mr. George Quincy",male,32.0,3,4,PC 17483,59.4,C62 C64,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me summarize of the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:18:26 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+dfs = [df.dropna() for df in dfs]
+result = {
+    "type": "dataframe",
+    "value": dfs[0].describe()
+}
+            ```
+            
+2025-01-04 12:18:26 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:18:26 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:18:26 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0].describe()}
+        ```
+2025-01-04 12:18:26 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:18:26 [INFO] Executing Step 7: ResultValidation
+2025-01-04 12:18:26 [INFO] Answer: {'type': 'dataframe', 'value':        PassengerId    Survived      Pclass         Age       SibSp       Parch        Fare
+count   891.000000  891.000000  891.000000  714.000000  891.000000  891.000000  891.000000
+mean    446.000000    0.383838    2.308642   29.699118    0.523008    0.381594   32.204208
+std     257.353842    0.486592    0.836071   14.526497    1.102743    0.806057   49.693429
+min       1.000000    0.000000    1.000000    0.420000    0.000000    0.000000    0.000000
+25%     223.500000    0.000000    2.000000   20.125000    0.000000    0.000000    7.910400
+50%     446.000000    0.000000    3.000000   28.000000    0.000000    0.000000   14.454200
+75%     668.500000    1.000000    3.000000   38.000000    1.000000    0.000000   31.000000
+max     891.000000    1.000000    3.000000   80.000000    8.000000    6.000000  512.329200}
+2025-01-04 12:18:26 [INFO] Executing Step 8: ResultParsing
+2025-01-04 12:24:30 [INFO] Question: how many ppl still alive
+2025-01-04 12:24:30 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:24:30 [INFO] Prompt ID: 7603e46d-16bb-42a5-851c-07318b7708e6
+2025-01-04 12:24:30 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:24:30 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:24:30 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:24:30 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:24:30 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+525,1,3,"Andrews, Miss. Kornelia Theodosia",male,,4,1,2650,21.6792,,Q
+830,0,2,"Dahl, Mr. Karl Edwart",male,70.5,3,2,2620,12.475,B37,C
+447,0,1,"Givard, Mr. Hans Kristensen",female,55.5,2,5,C.A. 18723,9.825,A24,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ how many ppl still alive
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:24:30 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:24:33 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+525,1,3,"Andrews, Miss. Kornelia Theodosia",male,,4,1,2650,21.6792,,Q
+830,0,2,"Dahl, Mr. Karl Edwart",male,70.5,3,2,2620,12.475,B37,C
+447,0,1,"Givard, Mr. Hans Kristensen",female,55.5,2,5,C.A. 18723,9.825,A24,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ how many ppl still alive
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:24:33 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+survived_count = dfs[0].Survived.sum()
+
+# Declare result var: 
+result = { "type": "number", "value": survived_count }
+            ```
+            
+2025-01-04 12:24:33 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:24:33 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:24:33 [INFO] 
+Code running:
+```
+survived_count = dfs[0].Survived.sum()
+result = {'type': 'number', 'value': survived_count}
+        ```
+2025-01-04 12:24:33 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:24:33 [INFO] Executing Step 7: ResultValidation
+2025-01-04 12:24:33 [INFO] Answer: {'type': 'number', 'value': 342}
+2025-01-04 12:24:33 [INFO] Executing Step 8: ResultParsing
+2025-01-04 12:29:27 [INFO] Question: how many ppl still alive? how many male and female?
+2025-01-04 12:29:27 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:29:27 [INFO] Prompt ID: 99a5bea4-447f-41f3-bb46-1da24af1155e
+2025-01-04 12:29:27 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:29:27 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:29:27 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:29:27 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:29:27 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+264,0,2,"Pears, Mrs. Thomas (Edith Wearne)",male,74.0,1,0,2653,263.0,,Q
+188,1,3,"Samaan, Mr. Youssef",female,40.0,8,5,2672,52.0,D36,
+588,1,1,"Toufik, Mr. Nakli",female,,3,3,65306,9.8375,D48,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ how many ppl still alive? how many male and female?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:29:27 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:29:30 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+264,0,2,"Pears, Mrs. Thomas (Edith Wearne)",male,74.0,1,0,2653,263.0,,Q
+188,1,3,"Samaan, Mr. Youssef",female,40.0,8,5,2672,52.0,D36,
+588,1,1,"Toufik, Mr. Nakli",female,,3,3,65306,9.8375,D48,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ how many ppl still alive? how many male and female?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:29:30 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+df = dfs[0]
+survived = df[df['Survived'] == 1]
+survived_count = survived.shape[0]
+
+male_survived = survived[survived['Sex'] == 'male']
+male_survived_count = male_survived.shape[0]
+
+female_survived = survived[survived['Sex'] == 'female']
+female_survived_count = female_survived.shape[0]
+
+# Declare result var: 
+result = {
+    "type": "string",
+    "value": f"Total survived: {survived_count}\nMale survived: {male_survived_count}\nFemale survived: {female_survived_count}"
+}
+            ```
+            
+2025-01-04 12:29:30 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:29:30 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:29:30 [INFO] 
+Code running:
+```
+df = dfs[0]
+survived = df[df['Survived'] == 1]
+survived_count = survived.shape[0]
+male_survived = survived[survived['Sex'] == 'male']
+male_survived_count = male_survived.shape[0]
+female_survived = survived[survived['Sex'] == 'female']
+female_survived_count = female_survived.shape[0]
+result = {'type': 'string', 'value': f"""Total survived: {survived_count}
+Male survived: {male_survived_count}
+Female survived: {female_survived_count}"""}
+        ```
+2025-01-04 12:29:30 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:29:30 [INFO] Executing Step 7: ResultValidation
+2025-01-04 12:29:30 [INFO] Answer: {'type': 'string', 'value': 'Total survived: 342\nMale survived: 109\nFemale survived: 233'}
+2025-01-04 12:29:30 [INFO] Executing Step 8: ResultParsing
+2025-01-04 12:29:54 [INFO] Question: give me a bar graph of Male survive and  Female survived
+2025-01-04 12:29:54 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:29:54 [INFO] Prompt ID: ad3c1d26-35e0-4dcd-a27e-4c44079ea6f3
+2025-01-04 12:29:54 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:29:54 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:29:54 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:29:54 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:29:54 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+717,1,1,"Smith, Mr. Thomas",female,20.0,8,3,323951,7.925,E36,
+228,0,2,"Keane, Mr. Andrew ""Andy""",female,,1,2,11967,39.4,D45,C
+797,0,3,"Larsson, Mr. Bengt Edvin",male,0.42,0,1,349203,8.85,,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me a bar graph of Male survive and  Female survived
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:29:54 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:29:57 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+717,1,1,"Smith, Mr. Thomas",female,20.0,8,3,323951,7.925,E36,
+228,0,2,"Keane, Mr. Andrew ""Andy""",female,,1,2,11967,39.4,D45,C
+797,0,3,"Larsson, Mr. Bengt Edvin",male,0.42,0,1,349203,8.85,,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me a bar graph of Male survive and  Female survived
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:29:57 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('survived_sex.png')
+
+# Declare result var: 
+result = { "type": "plot", "value": "survived_sex.png" }
+            ```
+            
+2025-01-04 12:29:57 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:29:57 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:29:57 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:29:57 [INFO] 
+Code running:
+```
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:29:57 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:29:58 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-04 12:29:58 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-04 12:29:58 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:29:58 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:29:58 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+717,1,1,"Smith, Mr. Thomas",female,20.0,8,3,323951,7.925,E36,
+228,0,2,"Keane, Mr. Andrew ""Andy""",female,,1,2,11967,39.4,D45,C
+797,0,3,"Larsson, Mr. Bengt Edvin",male,0.42,0,1,349203,8.85,,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and  Female survived
+
+You generated this python code:
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:29:58 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:30:01 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+717,1,1,"Smith, Mr. Thomas",female,20.0,8,3,323951,7.925,E36,
+228,0,2,"Keane, Mr. Andrew ""Andy""",female,,1,2,11967,39.4,D45,C
+797,0,3,"Larsson, Mr. Bengt Edvin",male,0.42,0,1,349203,8.85,,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and  Female survived
+
+You generated this python code:
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:30:01 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-04 12:30:01 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:30:01 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:30:01 [INFO] 
+Code running:
+```
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:30:02 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-04 12:30:02 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-04 12:30:02 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:30:02 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:30:02 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+717,1,1,"Smith, Mr. Thomas",female,20.0,8,3,323951,7.925,E36,
+228,0,2,"Keane, Mr. Andrew ""Andy""",female,,1,2,11967,39.4,D45,C
+797,0,3,"Larsson, Mr. Bengt Edvin",male,0.42,0,1,349203,8.85,,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and  Female survived
+
+You generated this python code:
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:30:02 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:30:05 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+717,1,1,"Smith, Mr. Thomas",female,20.0,8,3,323951,7.925,E36,
+228,0,2,"Keane, Mr. Andrew ""Andy""",female,,1,2,11967,39.4,D45,C
+797,0,3,"Larsson, Mr. Bengt Edvin",male,0.42,0,1,349203,8.85,,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and  Female survived
+
+You generated this python code:
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:30:05 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-04 12:30:05 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:30:05 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:30:05 [INFO] 
+Code running:
+```
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:30:05 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-04 12:30:05 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-04 12:30:05 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:30:05 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:30:05 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+717,1,1,"Smith, Mr. Thomas",female,20.0,8,3,323951,7.925,E36,
+228,0,2,"Keane, Mr. Andrew ""Andy""",female,,1,2,11967,39.4,D45,C
+797,0,3,"Larsson, Mr. Bengt Edvin",male,0.42,0,1,349203,8.85,,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and  Female survived
+
+You generated this python code:
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:30:05 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:30:08 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+717,1,1,"Smith, Mr. Thomas",female,20.0,8,3,323951,7.925,E36,
+228,0,2,"Keane, Mr. Andrew ""Andy""",female,,1,2,11967,39.4,D45,C
+797,0,3,"Larsson, Mr. Bengt Edvin",male,0.42,0,1,349203,8.85,,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and  Female survived
+
+You generated this python code:
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:30:08 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-04 12:30:08 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:30:08 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:30:08 [INFO] 
+Code running:
+```
+survived_sex = dfs[0].groupby('Sex')['Survived'].sum().reset_index()
+survived_sex['Survived'] = survived_sex['Survived'].astype(int)
+survived_sex.plot.bar(x='Sex', y='Survived')
+plt.xlabel('Sex')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:30:08 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-04 12:30:08 [ERROR] Pipeline failed on step 6: Value type <class 'str'> must match with type plot
+2025-01-04 12:32:51 [INFO] Question: give me correlation martrix in virtualization one 
+2025-01-04 12:32:51 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:32:51 [INFO] Prompt ID: 39ad67c3-6aaa-4e20-ac99-10122243e79e
+2025-01-04 12:32:51 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:32:51 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:32:51 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:32:51 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:32:51 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+689,0,1,"Oreskovic, Mr. Luka",male,13.0,4,4,237668,133.65,C128,
+811,1,2,"Carlsson, Mr. Frans Olof",female,,8,3,35273,49.5,,Q
+590,0,3,"Karun, Miss. Manca",female,28.5,0,0,347071,66.6,C123,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me correlation martrix in virtualization one 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:32:51 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:32:53 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+689,0,1,"Oreskovic, Mr. Luka",male,13.0,4,4,237668,133.65,C128,
+811,1,2,"Carlsson, Mr. Frans Olof",female,,8,3,35273,49.5,,Q
+590,0,3,"Karun, Miss. Manca",female,28.5,0,0,347071,66.6,C123,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me correlation martrix in virtualization one 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:32:53 [INFO] Code generated:
+            ```
+            import pandas as pd
+
+# Write code here
+corr_matrix = dfs[0].corr()
+
+# Declare result var: 
+result = { "type": "dataframe", "value": corr_matrix }
+            ```
+            
+2025-01-04 12:32:53 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:32:53 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:32:53 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+result = {'type': 'dataframe', 'value': corr_matrix}
+        ```
+2025-01-04 12:32:53 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:32:53 [INFO] Executing Step 7: ResultValidation
+2025-01-04 12:32:53 [INFO] Answer: {'type': 'dataframe', 'value':              PassengerId  Survived    Pclass       Age     SibSp     Parch      Fare
+PassengerId     1.000000 -0.005007 -0.035144  0.036847 -0.057527 -0.001652  0.012658
+Survived       -0.005007  1.000000 -0.338481 -0.077221 -0.035322  0.081629  0.257307
+Pclass         -0.035144 -0.338481  1.000000 -0.369226  0.083081  0.018443 -0.549500
+Age             0.036847 -0.077221 -0.369226  1.000000 -0.308247 -0.189119  0.096067
+SibSp          -0.057527 -0.035322  0.083081 -0.308247  1.000000  0.414838  0.159651
+Parch          -0.001652  0.081629  0.018443 -0.189119  0.414838  1.000000  0.216225
+Fare            0.012658  0.257307 -0.549500  0.096067  0.159651  0.216225  1.000000}
+2025-01-04 12:32:53 [INFO] Executing Step 8: ResultParsing
+2025-01-04 12:33:02 [INFO] Question: give me a bar graph of Male survive and Female survived
+
+
+2025-01-04 12:33:02 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:33:02 [INFO] Prompt ID: 2aa69ebd-848f-4f16-a678-3f8e91ecb42e
+2025-01-04 12:33:02 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:33:02 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:33:02 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:33:02 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:33:02 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+161,1,2,"Carr, Miss. Helen ""Ellen""",male,,0,0,SOTON/OQ 392082,18.0,,C
+880,1,1,"Balkic, Mr. Cerin",female,34.0,3,3,113796,12.875,F38,
+258,0,3,"Slocovski, Mr. Selman Francis",female,2.0,2,2,A/5 3902,50.4958,B19,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me a bar graph of Male survive and Female survived
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:33:02 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:33:06 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+161,1,2,"Carr, Miss. Helen ""Ellen""",male,,0,0,SOTON/OQ 392082,18.0,,C
+880,1,1,"Balkic, Mr. Cerin",female,34.0,3,3,113796,12.875,F38,
+258,0,3,"Slocovski, Mr. Selman Francis",female,2.0,2,2,A/5 3902,50.4958,B19,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me a bar graph of Male survive and Female survived
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:33:06 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+
+# Get the number of male and female survivors
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+
+# Create a bar chart of the results
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('survivors_by_sex.png')
+
+# Declare result var: 
+result = { "type": "plot", "value": "survivors_by_sex.png" }
+            ```
+            
+2025-01-04 12:33:06 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:33:06 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:33:06 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:33:06 [INFO] 
+Code running:
+```
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:33:06 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:33:06 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-04 12:33:06 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-04 12:33:06 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:33:06 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:33:06 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+161,1,2,"Carr, Miss. Helen ""Ellen""",male,,0,0,SOTON/OQ 392082,18.0,,C
+880,1,1,"Balkic, Mr. Cerin",female,34.0,3,3,113796,12.875,F38,
+258,0,3,"Slocovski, Mr. Selman Francis",female,2.0,2,2,A/5 3902,50.4958,B19,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived
+
+
+
+You generated this python code:
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:33:06 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:33:09 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+161,1,2,"Carr, Miss. Helen ""Ellen""",male,,0,0,SOTON/OQ 392082,18.0,,C
+880,1,1,"Balkic, Mr. Cerin",female,34.0,3,3,113796,12.875,F38,
+258,0,3,"Slocovski, Mr. Selman Francis",female,2.0,2,2,A/5 3902,50.4958,B19,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived
+
+
+
+You generated this python code:
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:33:09 [INFO] Code generated:
+            ```
+            survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-04 12:33:09 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:33:09 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:33:09 [INFO] 
+Code running:
+```
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:33:09 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-04 12:33:09 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-04 12:33:09 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:33:09 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:33:09 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+161,1,2,"Carr, Miss. Helen ""Ellen""",male,,0,0,SOTON/OQ 392082,18.0,,C
+880,1,1,"Balkic, Mr. Cerin",female,34.0,3,3,113796,12.875,F38,
+258,0,3,"Slocovski, Mr. Selman Francis",female,2.0,2,2,A/5 3902,50.4958,B19,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived
+
+
+
+You generated this python code:
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:33:09 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:33:12 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+161,1,2,"Carr, Miss. Helen ""Ellen""",male,,0,0,SOTON/OQ 392082,18.0,,C
+880,1,1,"Balkic, Mr. Cerin",female,34.0,3,3,113796,12.875,F38,
+258,0,3,"Slocovski, Mr. Selman Francis",female,2.0,2,2,A/5 3902,50.4958,B19,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived
+
+
+
+You generated this python code:
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:33:12 [INFO] Code generated:
+            ```
+            survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-04 12:33:12 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:33:12 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:33:12 [INFO] 
+Code running:
+```
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:33:12 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-04 12:33:12 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-04 12:33:12 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:33:12 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:33:12 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+161,1,2,"Carr, Miss. Helen ""Ellen""",male,,0,0,SOTON/OQ 392082,18.0,,C
+880,1,1,"Balkic, Mr. Cerin",female,34.0,3,3,113796,12.875,F38,
+258,0,3,"Slocovski, Mr. Selman Francis",female,2.0,2,2,A/5 3902,50.4958,B19,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived
+
+
+
+You generated this python code:
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:33:12 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:33:16 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+161,1,2,"Carr, Miss. Helen ""Ellen""",male,,0,0,SOTON/OQ 392082,18.0,,C
+880,1,1,"Balkic, Mr. Cerin",female,34.0,3,3,113796,12.875,F38,
+258,0,3,"Slocovski, Mr. Selman Francis",female,2.0,2,2,A/5 3902,50.4958,B19,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived
+
+
+
+You generated this python code:
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:33:16 [INFO] Code generated:
+            ```
+            survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-04 12:33:16 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:33:16 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:33:16 [INFO] 
+Code running:
+```
+survived_male = dfs[0][dfs[0]['Sex'] == 'male']['Survived'].value_counts()
+survived_female = dfs[0][dfs[0]['Sex'] == 'female']['Survived'].value_counts()
+plt.bar(['Male', 'Female'], [survived_male[1], survived_female[1]])
+plt.xlabel('Sex')
+plt.ylabel('Number of Survivors')
+plt.title('Number of Survivors by Sex')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:33:16 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-04 12:33:16 [ERROR] Pipeline failed on step 6: Value type <class 'str'> must match with type plot
+2025-01-04 12:33:40 [INFO] Question: give me a bar graph of Male survive and Female survived based on age
+2025-01-04 12:33:40 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:33:40 [INFO] Prompt ID: a2d459bf-0219-4067-a8f6-09b1f4cffdd9
+2025-01-04 12:33:40 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:33:40 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:33:40 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:33:40 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:33:40 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+198,0,3,"Mullens, Miss. Katherine ""Katie""",male,14.5,5,5,349254,14.4542,C7,
+550,0,1,"Sirayanian, Mr. Orsen",male,40.0,8,4,PC 17475,9.225,,Q
+421,1,2,"Dennis, Mr. Samuel",female,,2,6,364516,93.5,D35,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me a bar graph of Male survive and Female survived based on age
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:33:40 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:33:45 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+198,0,3,"Mullens, Miss. Katherine ""Katie""",male,14.5,5,5,349254,14.4542,C7,
+550,0,1,"Sirayanian, Mr. Orsen",male,40.0,8,4,PC 17475,9.225,,Q
+421,1,2,"Dennis, Mr. Samuel",female,,2,6,364516,93.5,D35,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me a bar graph of Male survive and Female survived based on age
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:33:45 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+
+# Create a dataframe with only the relevant columns
+df = dfs[0][['Sex', 'Survived', 'Age']]
+
+# Group the data by sex and age, and count the number of survivors
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+
+# Reset the index to create a new column with the sex and age values
+df = df.reset_index()
+
+# Create a bar chart of the data
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('survival_rates_by_sex_and_age.png')
+
+# Declare result var: 
+result = { "type": "plot", "value": "survival_rates_by_sex_and_age.png" }
+            ```
+            
+2025-01-04 12:33:45 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:33:45 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:33:45 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:33:45 [INFO] 
+Code running:
+```
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:33:45 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:33:45 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+2025-01-04 12:33:45 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-04 12:33:45 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:33:45 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:33:45 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+198,0,3,"Mullens, Miss. Katherine ""Katie""",male,14.5,5,5,349254,14.4542,C7,
+550,0,1,"Sirayanian, Mr. Orsen",male,40.0,8,4,PC 17475,9.225,,Q
+421,1,2,"Dennis, Mr. Samuel",female,,2,6,364516,93.5,D35,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived based on age
+
+You generated this python code:
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:33:45 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:33:49 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+198,0,3,"Mullens, Miss. Katherine ""Katie""",male,14.5,5,5,349254,14.4542,C7,
+550,0,1,"Sirayanian, Mr. Orsen",male,40.0,8,4,PC 17475,9.225,,Q
+421,1,2,"Dennis, Mr. Samuel",female,,2,6,364516,93.5,D35,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived based on age
+
+You generated this python code:
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:33:49 [INFO] Code generated:
+            ```
+            import seaborn as sns
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-04 12:33:49 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:33:49 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:33:49 [INFO] 
+Code running:
+```
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:33:49 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+2025-01-04 12:33:49 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-04 12:33:49 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:33:49 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:33:49 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+198,0,3,"Mullens, Miss. Katherine ""Katie""",male,14.5,5,5,349254,14.4542,C7,
+550,0,1,"Sirayanian, Mr. Orsen",male,40.0,8,4,PC 17475,9.225,,Q
+421,1,2,"Dennis, Mr. Samuel",female,,2,6,364516,93.5,D35,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived based on age
+
+You generated this python code:
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:33:49 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:33:52 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+198,0,3,"Mullens, Miss. Katherine ""Katie""",male,14.5,5,5,349254,14.4542,C7,
+550,0,1,"Sirayanian, Mr. Orsen",male,40.0,8,4,PC 17475,9.225,,Q
+421,1,2,"Dennis, Mr. Samuel",female,,2,6,364516,93.5,D35,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived based on age
+
+You generated this python code:
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:33:52 [INFO] Code generated:
+            ```
+            import seaborn as sns
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-04 12:33:52 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:33:52 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:33:52 [INFO] 
+Code running:
+```
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:33:52 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+2025-01-04 12:33:52 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-04 12:33:52 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:33:52 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:33:52 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+198,0,3,"Mullens, Miss. Katherine ""Katie""",male,14.5,5,5,349254,14.4542,C7,
+550,0,1,"Sirayanian, Mr. Orsen",male,40.0,8,4,PC 17475,9.225,,Q
+421,1,2,"Dennis, Mr. Samuel",female,,2,6,364516,93.5,D35,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived based on age
+
+You generated this python code:
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:33:52 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:33:55 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+198,0,3,"Mullens, Miss. Katherine ""Katie""",male,14.5,5,5,349254,14.4542,C7,
+550,0,1,"Sirayanian, Mr. Orsen",male,40.0,8,4,PC 17475,9.225,,Q
+421,1,2,"Dennis, Mr. Samuel",female,,2,6,364516,93.5,D35,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me a bar graph of Male survive and Female survived based on age
+
+You generated this python code:
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:33:55 [INFO] Code generated:
+            ```
+            import seaborn as sns
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-04 12:33:55 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:33:55 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:33:55 [INFO] 
+Code running:
+```
+df = dfs[0][['Sex', 'Survived', 'Age']]
+df = df.groupby(['Sex', 'Age']).agg({'Survived': 'sum'})
+df = df.reset_index()
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Age', y='Survived', hue='Sex', data=df)
+plt.title('Survival Rates by Sex and Age')
+plt.xlabel('Age')
+plt.ylabel('Number of Survivors')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-04 12:33:55 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 5, in <module>
+NameError: name 'sns' is not defined
+
+2025-01-04 12:33:55 [ERROR] Pipeline failed on step 6: name 'sns' is not defined
+2025-01-04 12:35:18 [INFO] Question: give me correlation martrix in virtualization graph
+2025-01-04 12:35:18 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:35:18 [INFO] Prompt ID: 17c2a533-53bd-45fe-8f0f-12c02b644703
+2025-01-04 12:35:18 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:35:18 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:35:18 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:35:18 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:35:19 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+270,1,3,"Lewy, Mr. Ervin G",male,,4,0,347085,49.5,A26,
+506,0,1,"Wheadon, Mr. Edward H",female,17.0,3,3,219533,29.7,,S
+572,1,2,"Wilhelms, Mr. Charles",female,10.0,0,4,12233,12.65,C90,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me correlation martrix in virtualization graph
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:35:19 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:35:21 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+270,1,3,"Lewy, Mr. Ervin G",male,,4,0,347085,49.5,A26,
+506,0,1,"Wheadon, Mr. Edward H",female,17.0,3,3,219533,29.7,,S
+572,1,2,"Wilhelms, Mr. Charles",female,10.0,0,4,12233,12.65,C90,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me correlation martrix in virtualization graph
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:35:21 [INFO] Code generated:
+            ```
+            import pandas as pd
+import numpy as np
+
+# Write code here
+
+# Calculate the correlation matrix
+corr_matrix = dfs[0].corr()
+
+# Declare result var: 
+result = { "type": "dataframe", "value": corr_matrix }
+            ```
+            
+2025-01-04 12:35:21 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:35:21 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:35:21 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+result = {'type': 'dataframe', 'value': corr_matrix}
+        ```
+2025-01-04 12:35:21 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:35:21 [INFO] Executing Step 7: ResultValidation
+2025-01-04 12:35:21 [INFO] Answer: {'type': 'dataframe', 'value':              PassengerId  Survived    Pclass       Age     SibSp     Parch      Fare
+PassengerId     1.000000 -0.005007 -0.035144  0.036847 -0.057527 -0.001652  0.012658
+Survived       -0.005007  1.000000 -0.338481 -0.077221 -0.035322  0.081629  0.257307
+Pclass         -0.035144 -0.338481  1.000000 -0.369226  0.083081  0.018443 -0.549500
+Age             0.036847 -0.077221 -0.369226  1.000000 -0.308247 -0.189119  0.096067
+SibSp          -0.057527 -0.035322  0.083081 -0.308247  1.000000  0.414838  0.159651
+Parch          -0.001652  0.081629  0.018443 -0.189119  0.414838  1.000000  0.216225
+Fare            0.012658  0.257307 -0.549500  0.096067  0.159651  0.216225  1.000000}
+2025-01-04 12:35:21 [INFO] Executing Step 8: ResultParsing
+2025-01-04 12:35:28 [INFO] Question: as a graphs 
+2025-01-04 12:35:28 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-04 12:35:28 [INFO] Prompt ID: c5060fa2-e4e1-46cb-8361-7a9811e8add7
+2025-01-04 12:35:28 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-04 12:35:28 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-04 12:35:28 [INFO] Executing Step 1: CacheLookup
+2025-01-04 12:35:28 [INFO] Executing Step 2: PromptGeneration
+2025-01-04 12:35:28 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+772,0,2,"Lesurer, Mr. Gustave J",male,,8,2,3101295,8.4333,A20,
+597,1,1,"Reeves, Mr. David",female,70.0,3,4,113804,9.225,,S
+857,0,3,"Klasen, Mr. Klas Albin",female,7.0,1,1,373450,15.85,C7,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ as a graphs 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-04 12:35:28 [INFO] Executing Step 3: CodeGenerator
+2025-01-04 12:35:33 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+772,0,2,"Lesurer, Mr. Gustave J",male,,8,2,3101295,8.4333,A20,
+597,1,1,"Reeves, Mr. David",female,70.0,3,4,113804,9.225,,S
+857,0,3,"Klasen, Mr. Klas Albin",female,7.0,1,1,373450,15.85,C7,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ as a graphs 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-04 12:35:33 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+
+# Generate a bar chart of the number of passengers in each class
+plt.figure(figsize=(10, 5))
+sns.countplot(x="Pclass", data=dfs[0])
+plt.title("Number of Passengers in Each Class")
+plt.xlabel("Class")
+plt.ylabel("Count")
+plt.savefig("class_distribution.png")
+
+# Generate a pie chart of the proportion of passengers who survived
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]["Survived"].value_counts(), labels=["Died", "Survived"], autopct="%1.1f%%")
+plt.title("Proportion of Passengers Who Survived")
+plt.savefig("survival_proportion.png")
+
+# Generate a scatter plot of the fare paid by each passenger against their age
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]["Age"], dfs[0]["Fare"])
+plt.title("Fare Paid vs. Age")
+plt.xlabel("Age")
+plt.ylabel("Fare")
+plt.savefig("fare_vs_age.png")
+
+# Declare result var: 
+result = {
+    "type": "plot",
+    "value": ["class_distribution.png", "survival_proportion.png", "fare_vs_age.png"]
+}
+            ```
+            
+2025-01-04 12:35:33 [INFO] Executing Step 4: CachePopulation
+2025-01-04 12:35:33 [INFO] Executing Step 5: CodeCleaning
+2025-01-04 12:35:33 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:35:33 [INFO] 
+Code running:
+```
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+        ```
+2025-01-04 12:35:33 [INFO] Executing Step 6: CodeExecution
+2025-01-04 12:35:33 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+2025-01-04 12:35:33 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-04 12:35:33 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:35:33 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:35:33 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+772,0,2,"Lesurer, Mr. Gustave J",male,,8,2,3101295,8.4333,A20,
+597,1,1,"Reeves, Mr. David",female,70.0,3,4,113804,9.225,,S
+857,0,3,"Klasen, Mr. Klas Albin",female,7.0,1,1,373450,15.85,C7,Q
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ as a graphs 
+
+You generated this python code:
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:35:33 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:35:39 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+772,0,2,"Lesurer, Mr. Gustave J",male,,8,2,3101295,8.4333,A20,
+597,1,1,"Reeves, Mr. David",female,70.0,3,4,113804,9.225,,S
+857,0,3,"Klasen, Mr. Klas Albin",female,7.0,1,1,373450,15.85,C7,Q
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ as a graphs 
+
+You generated this python code:
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:35:39 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+            ```
+            
+2025-01-04 12:35:39 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:35:39 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:35:39 [INFO] 
+Code running:
+```
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+        ```
+2025-01-04 12:35:39 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+2025-01-04 12:35:39 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-04 12:35:39 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:35:39 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:35:39 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+772,0,2,"Lesurer, Mr. Gustave J",male,,8,2,3101295,8.4333,A20,
+597,1,1,"Reeves, Mr. David",female,70.0,3,4,113804,9.225,,S
+857,0,3,"Klasen, Mr. Klas Albin",female,7.0,1,1,373450,15.85,C7,Q
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ as a graphs 
+
+You generated this python code:
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:35:39 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:35:44 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+772,0,2,"Lesurer, Mr. Gustave J",male,,8,2,3101295,8.4333,A20,
+597,1,1,"Reeves, Mr. David",female,70.0,3,4,113804,9.225,,S
+857,0,3,"Klasen, Mr. Klas Albin",female,7.0,1,1,373450,15.85,C7,Q
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ as a graphs 
+
+You generated this python code:
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:35:44 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+            ```
+            
+2025-01-04 12:35:44 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:35:44 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:35:44 [INFO] 
+Code running:
+```
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+        ```
+2025-01-04 12:35:44 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+2025-01-04 12:35:44 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-04 12:35:44 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-04 12:35:44 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-04 12:35:44 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+772,0,2,"Lesurer, Mr. Gustave J",male,,8,2,3101295,8.4333,A20,
+597,1,1,"Reeves, Mr. David",female,70.0,3,4,113804,9.225,,S
+857,0,3,"Klasen, Mr. Klas Albin",female,7.0,1,1,373450,15.85,C7,Q
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ as a graphs 
+
+You generated this python code:
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+2025-01-04 12:35:44 [INFO] Executing Step 1: CodeGenerator
+2025-01-04 12:35:50 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+772,0,2,"Lesurer, Mr. Gustave J",male,,8,2,3101295,8.4333,A20,
+597,1,1,"Reeves, Mr. David",female,70.0,3,4,113804,9.225,,S
+857,0,3,"Klasen, Mr. Klas Albin",female,7.0,1,1,373450,15.85,C7,Q
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ as a graphs 
+
+You generated this python code:
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-04 12:35:50 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+            ```
+            
+2025-01-04 12:35:50 [INFO] Executing Step 2: CodeCleaning
+2025-01-04 12:35:50 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-04 12:35:50 [INFO] 
+Code running:
+```
+plt.figure(figsize=(10, 5))
+sns.countplot(x='Pclass', data=dfs[0])
+plt.title('Number of Passengers in Each Class')
+plt.xlabel('Class')
+plt.ylabel('Count')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(5, 5))
+plt.pie(dfs[0]['Survived'].value_counts(), labels=['Died', 'Survived'], autopct='%1.1f%%')
+plt.title('Proportion of Passengers Who Survived')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.figure(figsize=(10, 5))
+plt.scatter(dfs[0]['Age'], dfs[0]['Fare'])
+plt.title('Fare Paid vs. Age')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': ['D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png', 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png']}
+        ```
+2025-01-04 12:35:50 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+NameError: name 'sns' is not defined
+
+2025-01-04 12:35:50 [ERROR] Pipeline failed on step 6: name 'sns' is not defined

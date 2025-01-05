@@ -75,7 +75,7 @@ AUPPSearch is an interactive Streamlit-based web application designed to provide
 ## Acknowledgments
 
 - [Streamlit](https://streamlit.io/) for the web application framework.
-- [OpenAI](https://openai.com/) for the Google Gemini model.
-- [pandasAI](https://github.com/pandas-ai/pandas-ai) for the intelligent dataframe integration.
+- [OpenAI](https://ai.google.dev/gemini-api/docs/models/gemini) for the Google Gemini model.
+- [pandasAI](https://pandas-ai.com/) for the intelligent dataframe integration.
 - [matplotlib](https://matplotlib.org/) for visualizations.
 

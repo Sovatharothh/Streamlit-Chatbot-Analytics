@@ -84,7 +84,7 @@ if prompt:
             if plt.get_fignums(): 
                 fig_to_plot = plt.gcf()
                 st.pyplot(fig=fig_to_plot)
-                # plt.clf()  
+
         except Exception as e:
             error_message = f"Error: {e}"
             st.session_state.conversation.append({"role": "assistant", "content": error_message})

@@ -80,10 +80,10 @@ if prompt:
             with st.chat_message("assistant"):
                 st.markdown(response)
 
-            # Check if a figure was generated before displaying it
-            if plt.get_fignums(): 
-                fig_to_plot = plt.gcf()
-                st.pyplot(fig=fig_to_plot)
+                # Only plot if a figure exists
+                if plt.get_fignums():  # Check for existing figures
+                    fig_to_plot = plt.gcf()
+                    st.pyplot(fig=fig_to_plot)
 
         except Exception as e:
             error_message = f"Error: {e}"

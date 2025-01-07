@@ -50029,3 +50029,2992 @@ result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exp
 pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
 
 2025-01-06 14:41:58 [ERROR] Pipeline failed on step 6: Value type <class 'str'> must match with type plot
+2025-01-07 12:33:49 [INFO] Question: explain me the dataset
+2025-01-07 12:33:49 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 12:33:49 [INFO] Prompt ID: 4fe53d36-3797-4965-a977-f22cf0ec5be8
+2025-01-07 12:33:49 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 12:33:49 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 12:33:49 [INFO] Executing Step 1: CacheLookup
+2025-01-07 12:33:49 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 12:33:49 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Russia,Western Europe,46,6.786,0.04934,0.19073,0.972,0.87519,0.53466,0.15184,0.14982,3.60214
+Afghanistan,Southeastern Asia,90,7.187,0.03077,0.25812,1.12575,0.09131,0.55664,0.25609,0.19591,2.04384
+Iceland,North America,103,4.971,0.05069,0.92049,0.90432,0.22396,0.59625,0.14234,0.42192,2.85737
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ explain me the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 12:33:49 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 12:33:52 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Russia,Western Europe,46,6.786,0.04934,0.19073,0.972,0.87519,0.53466,0.15184,0.14982,3.60214
+Afghanistan,Southeastern Asia,90,7.187,0.03077,0.25812,1.12575,0.09131,0.55664,0.25609,0.19591,2.04384
+Iceland,North America,103,4.971,0.05069,0.92049,0.90432,0.22396,0.59625,0.14234,0.42192,2.85737
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ explain me the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 12:33:52 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+result = {
+    "type": "string",
+    "value": f"The dataset contains {len(dfs)} dataframes. The first dataframe has {dfs[0].shape[0]} rows and {dfs[0].shape[1]} columns."
+}
+            ```
+            
+2025-01-07 12:33:52 [INFO] Executing Step 4: CachePopulation
+2025-01-07 12:33:52 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 12:33:52 [INFO] 
+Code running:
+```
+result = {'type': 'string', 'value': f'The dataset contains {len(dfs)} dataframes. The first dataframe has {dfs[0].shape[0]} rows and {dfs[0].shape[1]} columns.'}
+        ```
+2025-01-07 12:33:52 [INFO] Executing Step 6: CodeExecution
+2025-01-07 12:33:52 [INFO] Executing Step 7: ResultValidation
+2025-01-07 12:33:52 [INFO] Answer: {'type': 'string', 'value': 'The dataset contains 1 dataframes. The first dataframe has 158 rows and 12 columns.'}
+2025-01-07 12:33:52 [INFO] Executing Step 8: ResultParsing
+2025-01-07 12:34:08 [INFO] Question: what the dataset all about?
+2025-01-07 12:34:08 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 12:34:08 [INFO] Prompt ID: 4a2bf8d3-eecc-4aa5-93a5-c8e9b8a7e500
+2025-01-07 12:34:08 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 12:34:08 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 12:34:08 [INFO] Executing Step 1: CacheLookup
+2025-01-07 12:34:08 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 12:34:08 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Benin,Latin America and Caribbean,67,6.574,0.0613,0.86402,1.08708,0.73017,0.53726,0.07854,0.51912,0.89991
+Togo,Central and Eastern Europe,26,4.571,0.04678,1.2074,1.25712,0.42864,0.19184,0.4921,0.0,2.67782
+Sweden,Southern Asia,76,4.033,0.04528,0.83524,1.00964,0.81444,0.23414,0.17383,0.18557,1.73933
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what the dataset all about?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 12:34:08 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 12:34:11 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Benin,Latin America and Caribbean,67,6.574,0.0613,0.86402,1.08708,0.73017,0.53726,0.07854,0.51912,0.89991
+Togo,Central and Eastern Europe,26,4.571,0.04678,1.2074,1.25712,0.42864,0.19184,0.4921,0.0,2.67782
+Sweden,Southern Asia,76,4.033,0.04528,0.83524,1.00964,0.81444,0.23414,0.17383,0.18557,1.73933
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what the dataset all about?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 12:34:11 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+result = {
+    "type": "string",
+    "value": "The dataset contains information about the happiness of people in different countries. It includes data on happiness rank, happiness score, standard error, economy (GDP per capita), family, health (life expectancy), freedom, trust (government corruption), generosity, and dystopia residual."
+}
+            ```
+            
+2025-01-07 12:34:11 [INFO] Executing Step 4: CachePopulation
+2025-01-07 12:34:11 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 12:34:11 [INFO] 
+Code running:
+```
+result = {'type': 'string', 'value': 'The dataset contains information about the happiness of people in different countries. It includes data on happiness rank, happiness score, standard error, economy (GDP per capita), family, health (life expectancy), freedom, trust (government corruption), generosity, and dystopia residual.'}
+        ```
+2025-01-07 12:34:11 [INFO] Executing Step 6: CodeExecution
+2025-01-07 12:34:11 [INFO] Executing Step 7: ResultValidation
+2025-01-07 12:34:11 [INFO] Answer: {'type': 'string', 'value': 'The dataset contains information about the happiness of people in different countries. It includes data on happiness rank, happiness score, standard error, economy (GDP per capita), family, health (life expectancy), freedom, trust (government corruption), generosity, and dystopia residual.'}
+2025-01-07 12:34:11 [INFO] Executing Step 8: ResultParsing
+2025-01-07 12:34:33 [INFO] Question: can u give me correlation martix (graph)?
+2025-01-07 12:34:33 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 12:34:33 [INFO] Prompt ID: f86083ea-f306-457a-8f93-c40f0dbd2bc8
+2025-01-07 12:34:33 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 12:34:33 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 12:34:33 [INFO] Executing Step 1: CacheLookup
+2025-01-07 12:34:33 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 12:34:33 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Sudan,Western Europe,61,3.845,0.02424,0.7419,1.02626,0.73017,0.63297,0.17383,0.14982,1.93129
+China,Eastern Asia,138,3.655,0.04633,1.26637,0.59207,0.27688,0.63938,0.05747,0.3424,2.5945
+Bolivia,Sub-Saharan Africa,50,4.677,0.06257,1.56391,0.91226,0.87519,0.51697,0.38331,0.16893,2.24743
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u give me correlation martix (graph)?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 12:34:33 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 12:34:36 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Sudan,Western Europe,61,3.845,0.02424,0.7419,1.02626,0.73017,0.63297,0.17383,0.14982,1.93129
+China,Eastern Asia,138,3.655,0.04633,1.26637,0.59207,0.27688,0.63938,0.05747,0.3424,2.5945
+Bolivia,Sub-Saharan Africa,50,4.677,0.06257,1.56391,0.91226,0.87519,0.51697,0.38331,0.16893,2.24743
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u give me correlation martix (graph)?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 12:34:36 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Write code here
+
+# Calculate the correlation matrix
+corr_matrix = dfs[0].corr()
+
+# Generate a heatmap of the correlation matrix
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('correlation_matrix.png')
+
+# Declare result var: 
+result = { "type": "plot", "value": "correlation_matrix.png" }
+            ```
+            
+2025-01-07 12:34:36 [INFO] Executing Step 4: CachePopulation
+2025-01-07 12:34:36 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 12:34:37 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 12:34:37 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 12:34:37 [INFO] Executing Step 6: CodeExecution
+2025-01-07 12:34:51 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 12:34:51 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-07 12:34:51 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 12:34:51 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 12:34:52 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Sudan,Western Europe,61,3.845,0.02424,0.7419,1.02626,0.73017,0.63297,0.17383,0.14982,1.93129
+China,Eastern Asia,138,3.655,0.04633,1.26637,0.59207,0.27688,0.63938,0.05747,0.3424,2.5945
+Bolivia,Sub-Saharan Africa,50,4.677,0.06257,1.56391,0.91226,0.87519,0.51697,0.38331,0.16893,2.24743
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation martix (graph)?
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 12:34:52 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 12:34:53 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Sudan,Western Europe,61,3.845,0.02424,0.7419,1.02626,0.73017,0.63297,0.17383,0.14982,1.93129
+China,Eastern Asia,138,3.655,0.04633,1.26637,0.59207,0.27688,0.63938,0.05747,0.3424,2.5945
+Bolivia,Sub-Saharan Africa,50,4.677,0.06257,1.56391,0.91226,0.87519,0.51697,0.38331,0.16893,2.24743
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation martix (graph)?
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 12:34:53 [INFO] Code generated:
+            ```
+            import seaborn as sns
+import matplotlib.pyplot as plt
+
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+            ```
+            
+2025-01-07 12:34:53 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 12:34:53 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+        ```
+2025-01-07 12:34:54 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-01-07 12:34:54 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-07 12:34:54 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 12:34:54 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 12:34:54 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Sudan,Western Europe,61,3.845,0.02424,0.7419,1.02626,0.73017,0.63297,0.17383,0.14982,1.93129
+China,Eastern Asia,138,3.655,0.04633,1.26637,0.59207,0.27688,0.63938,0.05747,0.3424,2.5945
+Bolivia,Sub-Saharan Africa,50,4.677,0.06257,1.56391,0.91226,0.87519,0.51697,0.38331,0.16893,2.24743
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation martix (graph)?
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-01-07 12:34:54 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 12:34:56 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Sudan,Western Europe,61,3.845,0.02424,0.7419,1.02626,0.73017,0.63297,0.17383,0.14982,1.93129
+China,Eastern Asia,138,3.655,0.04633,1.26637,0.59207,0.27688,0.63938,0.05747,0.3424,2.5945
+Bolivia,Sub-Saharan Africa,50,4.677,0.06257,1.56391,0.91226,0.87519,0.51697,0.38331,0.16893,2.24743
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation martix (graph)?
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 12:34:56 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+            ```
+            
+2025-01-07 12:34:56 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 12:34:56 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+        ```
+2025-01-07 12:34:56 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-01-07 12:34:56 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-07 12:34:56 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 12:34:57 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 12:34:57 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Sudan,Western Europe,61,3.845,0.02424,0.7419,1.02626,0.73017,0.63297,0.17383,0.14982,1.93129
+China,Eastern Asia,138,3.655,0.04633,1.26637,0.59207,0.27688,0.63938,0.05747,0.3424,2.5945
+Bolivia,Sub-Saharan Africa,50,4.677,0.06257,1.56391,0.91226,0.87519,0.51697,0.38331,0.16893,2.24743
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation martix (graph)?
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-01-07 12:34:57 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 12:34:58 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Sudan,Western Europe,61,3.845,0.02424,0.7419,1.02626,0.73017,0.63297,0.17383,0.14982,1.93129
+China,Eastern Asia,138,3.655,0.04633,1.26637,0.59207,0.27688,0.63938,0.05747,0.3424,2.5945
+Bolivia,Sub-Saharan Africa,50,4.677,0.06257,1.56391,0.91226,0.87519,0.51697,0.38331,0.16893,2.24743
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation martix (graph)?
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 12:34:58 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+            ```
+            
+2025-01-07 12:34:58 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 12:34:58 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+        ```
+2025-01-07 12:34:59 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-01-07 12:34:59 [ERROR] Pipeline failed on step 6: No result returned
+2025-01-07 12:35:35 [INFO] Question: give me bar graph of top 5 happiness countries based on gdp
+2025-01-07 12:35:35 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 12:35:35 [INFO] Prompt ID: e75e1008-f9e6-4ebe-85d8-6578ea8cbc2d
+2025-01-07 12:35:35 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 12:35:35 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 12:35:35 [INFO] Executing Step 1: CacheLookup
+2025-01-07 12:35:35 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 12:35:35 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Hungary,Southeastern Asia,50,6.946,0.04734,0.80148,1.23788,1.02525,0.48574,0.08242,0.24362,3.17728
+Lithuania,Sub-Saharan Africa,72,6.786,0.03868,0.20824,0.76062,0.7385,0.62433,0.11023,0.0,0.65429
+Cyprus,Middle East and Northern Africa,131,4.739,0.03371,1.33723,0.91612,0.75905,0.19184,0.08484,0.128,2.5945
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me bar graph of top 5 happiness countries based on gdp
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 12:35:35 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 12:35:39 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Hungary,Southeastern Asia,50,6.946,0.04734,0.80148,1.23788,1.02525,0.48574,0.08242,0.24362,3.17728
+Lithuania,Sub-Saharan Africa,72,6.786,0.03868,0.20824,0.76062,0.7385,0.62433,0.11023,0.0,0.65429
+Cyprus,Middle East and Northern Africa,131,4.739,0.03371,1.33723,0.91612,0.75905,0.19184,0.08484,0.128,2.5945
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me bar graph of top 5 happiness countries based on gdp
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 12:35:39 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Get the top 5 countries with the highest GDP
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+
+# Create a bar chart of the top 5 countries' GDP
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('top_5_gdp.png')
+
+# Declare result var: 
+result = { "type": "plot", "value": "top_5_gdp.png" }
+            ```
+            
+2025-01-07 12:35:39 [INFO] Executing Step 4: CachePopulation
+2025-01-07 12:35:39 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 12:35:39 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 12:35:39 [INFO] 
+Code running:
+```
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 12:35:39 [INFO] Executing Step 6: CodeExecution
+2025-01-07 12:35:39 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 12:35:39 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-07 12:35:39 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 12:35:39 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 12:35:39 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Hungary,Southeastern Asia,50,6.946,0.04734,0.80148,1.23788,1.02525,0.48574,0.08242,0.24362,3.17728
+Lithuania,Sub-Saharan Africa,72,6.786,0.03868,0.20824,0.76062,0.7385,0.62433,0.11023,0.0,0.65429
+Cyprus,Middle East and Northern Africa,131,4.739,0.03371,1.33723,0.91612,0.75905,0.19184,0.08484,0.128,2.5945
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me bar graph of top 5 happiness countries based on gdp
+
+You generated this python code:
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 12:35:39 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 12:35:43 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Hungary,Southeastern Asia,50,6.946,0.04734,0.80148,1.23788,1.02525,0.48574,0.08242,0.24362,3.17728
+Lithuania,Sub-Saharan Africa,72,6.786,0.03868,0.20824,0.76062,0.7385,0.62433,0.11023,0.0,0.65429
+Cyprus,Middle East and Northern Africa,131,4.739,0.03371,1.33723,0.91612,0.75905,0.19184,0.08484,0.128,2.5945
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me bar graph of top 5 happiness countries based on gdp
+
+You generated this python code:
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 12:35:43 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-07 12:35:43 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 12:35:43 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 12:35:43 [INFO] 
+Code running:
+```
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 12:35:43 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 12:35:43 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-07 12:35:43 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 12:35:43 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 12:35:43 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Hungary,Southeastern Asia,50,6.946,0.04734,0.80148,1.23788,1.02525,0.48574,0.08242,0.24362,3.17728
+Lithuania,Sub-Saharan Africa,72,6.786,0.03868,0.20824,0.76062,0.7385,0.62433,0.11023,0.0,0.65429
+Cyprus,Middle East and Northern Africa,131,4.739,0.03371,1.33723,0.91612,0.75905,0.19184,0.08484,0.128,2.5945
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me bar graph of top 5 happiness countries based on gdp
+
+You generated this python code:
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 12:35:43 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 12:35:46 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Hungary,Southeastern Asia,50,6.946,0.04734,0.80148,1.23788,1.02525,0.48574,0.08242,0.24362,3.17728
+Lithuania,Sub-Saharan Africa,72,6.786,0.03868,0.20824,0.76062,0.7385,0.62433,0.11023,0.0,0.65429
+Cyprus,Middle East and Northern Africa,131,4.739,0.03371,1.33723,0.91612,0.75905,0.19184,0.08484,0.128,2.5945
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me bar graph of top 5 happiness countries based on gdp
+
+You generated this python code:
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 12:35:46 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-07 12:35:46 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 12:35:46 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 12:35:46 [INFO] 
+Code running:
+```
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 12:35:46 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 12:35:46 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-07 12:35:46 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 12:35:46 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 12:35:46 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Hungary,Southeastern Asia,50,6.946,0.04734,0.80148,1.23788,1.02525,0.48574,0.08242,0.24362,3.17728
+Lithuania,Sub-Saharan Africa,72,6.786,0.03868,0.20824,0.76062,0.7385,0.62433,0.11023,0.0,0.65429
+Cyprus,Middle East and Northern Africa,131,4.739,0.03371,1.33723,0.91612,0.75905,0.19184,0.08484,0.128,2.5945
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me bar graph of top 5 happiness countries based on gdp
+
+You generated this python code:
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 12:35:46 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 12:35:49 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Hungary,Southeastern Asia,50,6.946,0.04734,0.80148,1.23788,1.02525,0.48574,0.08242,0.24362,3.17728
+Lithuania,Sub-Saharan Africa,72,6.786,0.03868,0.20824,0.76062,0.7385,0.62433,0.11023,0.0,0.65429
+Cyprus,Middle East and Northern Africa,131,4.739,0.03371,1.33723,0.91612,0.75905,0.19184,0.08484,0.128,2.5945
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me bar graph of top 5 happiness countries based on gdp
+
+You generated this python code:
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 12:35:49 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-07 12:35:49 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 12:35:50 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 12:35:50 [INFO] 
+Code running:
+```
+top_5_gdp = dfs[0].sort_values('Economy (GDP per Capita)', ascending=False).head(5)
+plt.bar(top_5_gdp['Country'], top_5_gdp['Economy (GDP per Capita)'])
+plt.xlabel('Country')
+plt.ylabel('GDP per Capita')
+plt.title('Top 5 Countries by GDP')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 12:35:50 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 12:35:50 [ERROR] Pipeline failed on step 6: Value type <class 'str'> must match with type plot
+2025-01-07 12:41:10 [INFO] Question: which country is the most happinest country
+2025-01-07 12:41:10 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 12:41:10 [INFO] Prompt ID: a360c949-f98b-436f-aeb1-13867facaf6a
+2025-01-07 12:41:10 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 12:41:10 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 12:41:10 [INFO] Executing Step 1: CacheLookup
+2025-01-07 12:41:10 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 12:41:10 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Benin,Southeastern Asia,29,5.948,0.05141,1.01216,1.21963,0.07566,0.55884,0.10583,0.27815,1.34759
+Bolivia,Australia and New Zealand,70,4.715,0.03371,0.26074,1.36058,0.56874,0.4845,0.04582,0.13748,1.42766
+Haiti,Western Europe,148,6.298,0.03553,0.89537,0.85563,0.85857,0.38857,0.18906,0.16228,1.73797
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ which country is the most happinest country
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 12:41:10 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 12:41:14 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Benin,Southeastern Asia,29,5.948,0.05141,1.01216,1.21963,0.07566,0.55884,0.10583,0.27815,1.34759
+Bolivia,Australia and New Zealand,70,4.715,0.03371,0.26074,1.36058,0.56874,0.4845,0.04582,0.13748,1.42766
+Haiti,Western Europe,148,6.298,0.03553,0.89537,0.85563,0.85857,0.38857,0.18906,0.16228,1.73797
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ which country is the most happinest country
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 12:41:14 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+highest_happiness_score = dfs[0]["Happiness Score"].max()
+happiest_country = dfs[0][dfs[0]["Happiness Score"] == highest_happiness_score]["Country"].values[0]
+
+# Declare result var: 
+result = { "type": "string", "value": f"The happiest country is {happiest_country}." }
+            ```
+            
+2025-01-07 12:41:14 [INFO] Executing Step 4: CachePopulation
+2025-01-07 12:41:14 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 12:41:14 [INFO] 
+Code running:
+```
+highest_happiness_score = dfs[0]['Happiness Score'].max()
+happiest_country = dfs[0][dfs[0]['Happiness Score'] == highest_happiness_score]['Country'].values[0]
+result = {'type': 'string', 'value': f'The happiest country is {happiest_country}.'}
+        ```
+2025-01-07 12:41:14 [INFO] Executing Step 6: CodeExecution
+2025-01-07 12:41:14 [INFO] Executing Step 7: ResultValidation
+2025-01-07 12:41:14 [INFO] Answer: {'type': 'string', 'value': 'The happiest country is Switzerland.'}
+2025-01-07 12:41:14 [INFO] Executing Step 8: ResultParsing
+2025-01-07 18:29:05 [INFO] Question: expalin me about this dataset
+2025-01-07 18:29:05 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 18:29:05 [INFO] Prompt ID: 7adf187c-59ef-42f1-be76-a10520f25f52
+2025-01-07 18:29:05 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 18:29:05 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 18:29:05 [INFO] Executing Step 1: CacheLookup
+2025-01-07 18:29:05 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 18:29:05 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Somaliland region,Latin America and Caribbean,53,4.677,0.04324,1.02054,0.76062,0.91087,0.09245,0.06398,0.13748,1.73933
+Yemen,Central and Eastern Europe,134,2.905,0.07446,0.6632,0.91916,0.0,0.45492,0.13633,0.18557,2.44191
+Senegal,Sub-Saharan Africa,89,6.298,0.03729,0.01604,1.25712,0.44055,0.42908,0.41978,0.23351,2.77729
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ expalin me about this dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 18:29:05 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 18:29:08 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Somaliland region,Latin America and Caribbean,53,4.677,0.04324,1.02054,0.76062,0.91087,0.09245,0.06398,0.13748,1.73933
+Yemen,Central and Eastern Europe,134,2.905,0.07446,0.6632,0.91916,0.0,0.45492,0.13633,0.18557,2.44191
+Senegal,Sub-Saharan Africa,89,6.298,0.03729,0.01604,1.25712,0.44055,0.42908,0.41978,0.23351,2.77729
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ expalin me about this dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 18:29:08 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+result = {
+    "type": "string",
+    "value": f"The dataset contains {len(dfs)} dataframes."
+}
+            ```
+            
+2025-01-07 18:29:08 [INFO] Executing Step 4: CachePopulation
+2025-01-07 18:29:08 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 18:29:08 [INFO] 
+Code running:
+```
+result = {'type': 'string', 'value': f'The dataset contains {len(dfs)} dataframes.'}
+        ```
+2025-01-07 18:29:08 [INFO] Executing Step 6: CodeExecution
+2025-01-07 18:29:08 [INFO] Executing Step 7: ResultValidation
+2025-01-07 18:29:08 [INFO] Answer: {'type': 'string', 'value': 'The dataset contains 1 dataframes.'}
+2025-01-07 18:29:08 [INFO] Executing Step 8: ResultParsing
+2025-01-07 18:29:20 [INFO] Question: expalin me about this dataset are all about
+2025-01-07 18:29:20 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 18:29:20 [INFO] Prompt ID: 3ccee823-4a69-4a33-9160-b092b1338767
+2025-01-07 18:29:20 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 18:29:20 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 18:29:20 [INFO] Executing Step 1: CacheLookup
+2025-01-07 18:29:20 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 18:29:20 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Myanmar,Australia and New Zealand,119,4.252,0.05051,0.88113,1.28907,0.72926,0.1185,0.09179,0.17441,2.21978
+Congo (Brazzaville),Southeastern Asia,29,5.399,0.04456,0.25812,1.23287,0.31051,0.4084,0.14234,0.22974,1.68435
+Kazakhstan,Western Europe,43,5.14,0.04263,0.7419,0.79624,0.91894,0.3974,0.12352,0.47998,2.00073
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ expalin me about this dataset are all about
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 18:29:20 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 18:29:23 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Myanmar,Australia and New Zealand,119,4.252,0.05051,0.88113,1.28907,0.72926,0.1185,0.09179,0.17441,2.21978
+Congo (Brazzaville),Southeastern Asia,29,5.399,0.04456,0.25812,1.23287,0.31051,0.4084,0.14234,0.22974,1.68435
+Kazakhstan,Western Europe,43,5.14,0.04263,0.7419,0.79624,0.91894,0.3974,0.12352,0.47998,2.00073
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ expalin me about this dataset are all about
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 18:29:23 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+result = {
+    "type": "string",
+    "value": "This dataset contains information about the happiness of people in different countries. It includes data on happiness rank, happiness score, standard error, economy (GDP per capita), family, health (life expectancy), freedom, trust (government corruption), generosity, and dystopia residual."
+}
+            ```
+            
+2025-01-07 18:29:24 [INFO] Executing Step 4: CachePopulation
+2025-01-07 18:29:24 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 18:29:24 [INFO] 
+Code running:
+```
+result = {'type': 'string', 'value': 'This dataset contains information about the happiness of people in different countries. It includes data on happiness rank, happiness score, standard error, economy (GDP per capita), family, health (life expectancy), freedom, trust (government corruption), generosity, and dystopia residual.'}
+        ```
+2025-01-07 18:29:24 [INFO] Executing Step 6: CodeExecution
+2025-01-07 18:29:24 [INFO] Executing Step 7: ResultValidation
+2025-01-07 18:29:24 [INFO] Answer: {'type': 'string', 'value': 'This dataset contains information about the happiness of people in different countries. It includes data on happiness rank, happiness score, standard error, economy (GDP per capita), family, health (life expectancy), freedom, trust (government corruption), generosity, and dystopia residual.'}
+2025-01-07 18:29:24 [INFO] Executing Step 8: ResultParsing
+2025-01-07 18:29:45 [INFO] Question: can u analyize all the data 
+2025-01-07 18:29:45 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 18:29:45 [INFO] Prompt ID: 45f49d27-dbb3-42a9-9286-baeac9cbe2ff
+2025-01-07 18:29:45 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 18:29:45 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 18:29:45 [INFO] Executing Step 1: CacheLookup
+2025-01-07 18:29:45 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 18:29:45 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,Eastern Asia,94,6.67,0.05412,0.7419,1.23289,0.07612,0.34037,0.21312,0.25376,1.86565
+Libya,Middle East and Northern Africa,77,7.522,0.03328,0.36471,0.88588,0.15185,0.3974,0.17521,0.27815,2.47489
+Madagascar,Sub-Saharan Africa,88,7.284,0.08658,1.2074,1.03276,0.20583,0.43626,0.39928,0.16388,2.04384
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u analyize all the data 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 18:29:45 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 18:29:54 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,Eastern Asia,94,6.67,0.05412,0.7419,1.23289,0.07612,0.34037,0.21312,0.25376,1.86565
+Libya,Middle East and Northern Africa,77,7.522,0.03328,0.36471,0.88588,0.15185,0.3974,0.17521,0.27815,2.47489
+Madagascar,Sub-Saharan Africa,88,7.284,0.08658,1.2074,1.03276,0.20583,0.43626,0.39928,0.16388,2.04384
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u analyize all the data 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 18:29:54 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+
+# Get the first dataframe from the list
+df = dfs[0]
+
+# Get the highest happiness score
+highest_happiness_score = df['Happiness Score'].max()
+
+# Get the country with the highest happiness score
+happiest_country = df[df['Happiness Score'] == highest_happiness_score]['Country'].values[0]
+
+# Get the lowest happiness score
+lowest_happiness_score = df['Happiness Score'].min()
+
+# Get the country with the lowest happiness score
+least_happy_country = df[df['Happiness Score'] == lowest_happiness_score]['Country'].values[0]
+
+# Get the average happiness score
+avg_happiness_score = df['Happiness Score'].mean()
+
+# Get the median happiness score
+median_happiness_score = df['Happiness Score'].median()
+
+# Get the standard deviation of happiness score
+std_happiness_score = df['Happiness Score'].std()
+
+# Get the top 10 happiest countries
+top_10_happiest_countries = df.nlargest(10, 'Happiness Score')['Country'].tolist()
+
+# Get the bottom 10 least happy countries
+bottom_10_least_happy_countries = df.nsmallest(10, 'Happiness Score')['Country'].tolist()
+
+# Create a bar chart of the top 10 happiest countries
+plt.bar(top_10_happiest_countries, df[df['Country'].isin(top_10_happiest_countries)]['Happiness Score'])
+plt.xlabel('Country')
+plt.ylabel('Happiness Score')
+plt.title('Top 10 Happiest Countries')
+plt.savefig('top_10_happiest_countries.png')
+
+# Create a bar chart of the bottom 10 least happy countries
+plt.bar(bottom_10_least_happy_countries, df[df['Country'].isin(bottom_10_least_happy_countries)]['Happiness Score'])
+plt.xlabel('Country')
+plt.ylabel('Happiness Score')
+plt.title('Bottom 10 Least Happy Countries')
+plt.savefig('bottom_10_least_happy_countries.png')
+
+# Declare result var: 
+result = {
+    "type": "string",
+    "value": f"The happiest country is {happiest_country} with a happiness score of {highest_happiness_score}.\nThe least happy country is {least_happy_country} with a happiness score of {lowest_happiness_score}.\nThe average happiness score is {avg_happiness_score}.\nThe median happiness score is {median_happiness_score}.\nThe standard deviation of happiness score is {std_happiness_score}."
+}
+            ```
+            
+2025-01-07 18:29:54 [INFO] Executing Step 4: CachePopulation
+2025-01-07 18:29:54 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 18:29:54 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:29:54 [INFO] 
+Code running:
+```
+df = dfs[0]
+highest_happiness_score = df['Happiness Score'].max()
+happiest_country = df[df['Happiness Score'] == highest_happiness_score]['Country'].values[0]
+lowest_happiness_score = df['Happiness Score'].min()
+least_happy_country = df[df['Happiness Score'] == lowest_happiness_score]['Country'].values[0]
+avg_happiness_score = df['Happiness Score'].mean()
+median_happiness_score = df['Happiness Score'].median()
+std_happiness_score = df['Happiness Score'].std()
+top_10_happiest_countries = df.nlargest(10, 'Happiness Score')['Country'].tolist()
+bottom_10_least_happy_countries = df.nsmallest(10, 'Happiness Score')['Country'].tolist()
+plt.bar(top_10_happiest_countries, df[df['Country'].isin(top_10_happiest_countries)]['Happiness Score'])
+plt.xlabel('Country')
+plt.ylabel('Happiness Score')
+plt.title('Top 10 Happiest Countries')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+plt.bar(bottom_10_least_happy_countries, df[df['Country'].isin(bottom_10_least_happy_countries)]['Happiness Score'])
+plt.xlabel('Country')
+plt.ylabel('Happiness Score')
+plt.title('Bottom 10 Least Happy Countries')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'string', 'value': f"""The happiest country is {happiest_country} with a happiness score of {highest_happiness_score}.
+The least happy country is {least_happy_country} with a happiness score of {lowest_happiness_score}.
+The average happiness score is {avg_happiness_score}.
+The median happiness score is {median_happiness_score}.
+The standard deviation of happiness score is {std_happiness_score}."""}
+        ```
+2025-01-07 18:29:54 [INFO] Executing Step 6: CodeExecution
+2025-01-07 18:29:55 [INFO] Executing Step 7: ResultValidation
+2025-01-07 18:29:55 [INFO] Answer: {'type': 'string', 'value': 'The happiest country is Switzerland with a happiness score of 7.587.\nThe least happy country is Togo with a happiness score of 2.839.\nThe average happiness score is 5.375734177215189.\nThe median happiness score is 5.2325.\nThe standard deviation of happiness score is 1.1450101349520665.'}
+2025-01-07 18:29:55 [INFO] Executing Step 8: ResultParsing
+2025-01-07 18:30:56 [INFO] Question: which region is the most happineess country
+2025-01-07 18:30:56 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 18:30:56 [INFO] Prompt ID: 95d024e5-b5c1-4d64-9b09-bbd21fdfe81b
+2025-01-07 18:30:56 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 18:30:57 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 18:30:57 [INFO] Executing Step 1: CacheLookup
+2025-01-07 18:30:57 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 18:30:57 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Guinea,Latin America and Caribbean,113,4.332,0.07068,0.91861,1.26504,0.66926,0.61576,0.00227,0.06822,2.44876
+Moldova,Southern Asia,99,7.284,0.06607,1.00761,1.23617,0.91087,0.35068,0.39928,0.20165,1.73799
+Latvia,Australia and New Zealand,129,5.057,0.03947,1.08254,1.3006,0.89042,0.66973,0.14296,0.1826,2.67585
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ which region is the most happineess country
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 18:30:57 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 18:30:59 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Guinea,Latin America and Caribbean,113,4.332,0.07068,0.91861,1.26504,0.66926,0.61576,0.00227,0.06822,2.44876
+Moldova,Southern Asia,99,7.284,0.06607,1.00761,1.23617,0.91087,0.35068,0.39928,0.20165,1.73799
+Latvia,Australia and New Zealand,129,5.057,0.03947,1.08254,1.3006,0.89042,0.66973,0.14296,0.1826,2.67585
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ which region is the most happineess country
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 18:30:59 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+happiness_df = dfs[0]
+most_happiness_region = happiness_df.groupby('Region')['Happiness Score'].mean().idxmax()
+
+# Declare result var: 
+result = { "type": "string", "value": f"The most happiness region is {most_happiness_region}." }
+            ```
+            
+2025-01-07 18:30:59 [INFO] Executing Step 4: CachePopulation
+2025-01-07 18:30:59 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 18:30:59 [INFO] 
+Code running:
+```
+happiness_df = dfs[0]
+most_happiness_region = happiness_df.groupby('Region')['Happiness Score'].mean().idxmax()
+result = {'type': 'string', 'value': f'The most happiness region is {most_happiness_region}.'}
+        ```
+2025-01-07 18:30:59 [INFO] Executing Step 6: CodeExecution
+2025-01-07 18:30:59 [INFO] Executing Step 7: ResultValidation
+2025-01-07 18:30:59 [INFO] Answer: {'type': 'string', 'value': 'The most happiness region is Australia and New Zealand.'}
+2025-01-07 18:30:59 [INFO] Executing Step 8: ResultParsing
+2025-01-07 18:31:23 [INFO] Question: why these are the most happiness region is Australia and New Zealand.
+
+2025-01-07 18:31:23 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 18:31:23 [INFO] Prompt ID: de0953b9-430d-4f33-8577-f86428780c63
+2025-01-07 18:31:23 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 18:31:23 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 18:31:23 [INFO] Executing Step 1: CacheLookup
+2025-01-07 18:31:23 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 18:31:23 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Bhutan,Central and Eastern Europe,145,4.739,0.04394,1.20813,1.34951,0.77903,0.40148,0.08289,0.30638,1.96961
+Benin,Western Europe,48,6.67,0.04528,1.22857,1.15102,0.31051,0.31767,0.06413,0.34377,3.10709
+Macedonia,Latin America and Caribbean,114,5.89,0.04367,1.15991,1.31967,0.66015,0.64157,0.04232,0.05444,2.32407
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ why these are the most happiness region is Australia and New Zealand.
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 18:31:23 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 18:31:28 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Bhutan,Central and Eastern Europe,145,4.739,0.04394,1.20813,1.34951,0.77903,0.40148,0.08289,0.30638,1.96961
+Benin,Western Europe,48,6.67,0.04528,1.22857,1.15102,0.31051,0.31767,0.06413,0.34377,3.10709
+Macedonia,Latin America and Caribbean,114,5.89,0.04367,1.15991,1.31967,0.66015,0.64157,0.04232,0.05444,2.32407
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ why these are the most happiness region is Australia and New Zealand.
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 18:31:28 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Get the data for Australia and New Zealand
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+
+# Calculate the average happiness score for Australia and New Zealand
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+
+# Get the data for all other regions
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+
+# Calculate the average happiness score for all other regions
+other_avg_happiness = other_data['Happiness Score'].mean()
+
+# Plot the average happiness scores
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('happiness_by_region.png')
+
+# Declare result var: 
+result = { "type": "plot", "value": "happiness_by_region.png" }
+            ```
+            
+2025-01-07 18:31:28 [INFO] Executing Step 4: CachePopulation
+2025-01-07 18:31:28 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 18:31:28 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:31:28 [INFO] 
+Code running:
+```
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 18:31:28 [INFO] Executing Step 6: CodeExecution
+2025-01-07 18:31:29 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 18:31:29 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-07 18:31:29 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 18:31:29 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 18:31:29 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Bhutan,Central and Eastern Europe,145,4.739,0.04394,1.20813,1.34951,0.77903,0.40148,0.08289,0.30638,1.96961
+Benin,Western Europe,48,6.67,0.04528,1.22857,1.15102,0.31051,0.31767,0.06413,0.34377,3.10709
+Macedonia,Latin America and Caribbean,114,5.89,0.04367,1.15991,1.31967,0.66015,0.64157,0.04232,0.05444,2.32407
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ why these are the most happiness region is Australia and New Zealand.
+
+
+You generated this python code:
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 18:31:29 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 18:31:33 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Bhutan,Central and Eastern Europe,145,4.739,0.04394,1.20813,1.34951,0.77903,0.40148,0.08289,0.30638,1.96961
+Benin,Western Europe,48,6.67,0.04528,1.22857,1.15102,0.31051,0.31767,0.06413,0.34377,3.10709
+Macedonia,Latin America and Caribbean,114,5.89,0.04367,1.15991,1.31967,0.66015,0.64157,0.04232,0.05444,2.32407
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ why these are the most happiness region is Australia and New Zealand.
+
+
+You generated this python code:
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 18:31:33 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Get the data for Australia and New Zealand
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+
+# Calculate the average happiness score for Australia and New Zealand
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+
+# Get the data for all other regions
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+
+# Calculate the average happiness score for all other regions
+other_avg_happiness = other_data['Happiness Score'].mean()
+
+# Create a bar chart comparing the average happiness scores
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+
+# Save the chart to a file
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+
+# Return the chart as a plot type
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-07 18:31:33 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 18:31:33 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:31:33 [INFO] 
+Code running:
+```
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 18:31:33 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 18:31:33 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-07 18:31:33 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 18:31:33 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 18:31:33 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Bhutan,Central and Eastern Europe,145,4.739,0.04394,1.20813,1.34951,0.77903,0.40148,0.08289,0.30638,1.96961
+Benin,Western Europe,48,6.67,0.04528,1.22857,1.15102,0.31051,0.31767,0.06413,0.34377,3.10709
+Macedonia,Latin America and Caribbean,114,5.89,0.04367,1.15991,1.31967,0.66015,0.64157,0.04232,0.05444,2.32407
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ why these are the most happiness region is Australia and New Zealand.
+
+
+You generated this python code:
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 18:31:33 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 18:31:38 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Bhutan,Central and Eastern Europe,145,4.739,0.04394,1.20813,1.34951,0.77903,0.40148,0.08289,0.30638,1.96961
+Benin,Western Europe,48,6.67,0.04528,1.22857,1.15102,0.31051,0.31767,0.06413,0.34377,3.10709
+Macedonia,Latin America and Caribbean,114,5.89,0.04367,1.15991,1.31967,0.66015,0.64157,0.04232,0.05444,2.32407
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ why these are the most happiness region is Australia and New Zealand.
+
+
+You generated this python code:
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 18:31:38 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Get the data for Australia and New Zealand
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+
+# Calculate the average happiness score for Australia and New Zealand
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+
+# Get the data for all other regions
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+
+# Calculate the average happiness score for all other regions
+other_avg_happiness = other_data['Happiness Score'].mean()
+
+# Create a bar chart comparing the average happiness scores
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+
+# Save the chart to a file
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+
+# Return the chart as a plot type
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-07 18:31:38 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 18:31:38 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:31:38 [INFO] 
+Code running:
+```
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 18:31:38 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 18:31:38 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-07 18:31:38 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 18:31:38 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 18:31:38 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Bhutan,Central and Eastern Europe,145,4.739,0.04394,1.20813,1.34951,0.77903,0.40148,0.08289,0.30638,1.96961
+Benin,Western Europe,48,6.67,0.04528,1.22857,1.15102,0.31051,0.31767,0.06413,0.34377,3.10709
+Macedonia,Latin America and Caribbean,114,5.89,0.04367,1.15991,1.31967,0.66015,0.64157,0.04232,0.05444,2.32407
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ why these are the most happiness region is Australia and New Zealand.
+
+
+You generated this python code:
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 18:31:38 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 18:31:43 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Bhutan,Central and Eastern Europe,145,4.739,0.04394,1.20813,1.34951,0.77903,0.40148,0.08289,0.30638,1.96961
+Benin,Western Europe,48,6.67,0.04528,1.22857,1.15102,0.31051,0.31767,0.06413,0.34377,3.10709
+Macedonia,Latin America and Caribbean,114,5.89,0.04367,1.15991,1.31967,0.66015,0.64157,0.04232,0.05444,2.32407
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ why these are the most happiness region is Australia and New Zealand.
+
+
+You generated this python code:
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 18:31:43 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Get the data for Australia and New Zealand
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+
+# Calculate the average happiness score for Australia and New Zealand
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+
+# Get the data for all other regions
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+
+# Calculate the average happiness score for all other regions
+other_avg_happiness = other_data['Happiness Score'].mean()
+
+# Create a bar chart comparing the average happiness scores
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+
+# Save the chart to a file
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+
+# Return the chart as a plot type
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-07 18:31:43 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 18:31:43 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:31:43 [INFO] 
+Code running:
+```
+anz_data = dfs[0][dfs[0]['Region'] == 'Australia and New Zealand']
+anz_avg_happiness = anz_data['Happiness Score'].mean()
+other_data = dfs[0][dfs[0]['Region'] != 'Australia and New Zealand']
+other_avg_happiness = other_data['Happiness Score'].mean()
+plt.bar(['Australia and New Zealand', 'Other Regions'], [anz_avg_happiness, other_avg_happiness])
+plt.xlabel('Region')
+plt.ylabel('Average Happiness Score')
+plt.title('Average Happiness Scores by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 18:31:44 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 18:31:44 [ERROR] Pipeline failed on step 6: Value type <class 'str'> must match with type plot
+2025-01-07 18:32:29 [INFO] Question: give me pie chart of happinees countries based on region based on GDP 
+2025-01-07 18:32:29 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 18:32:29 [INFO] Prompt ID: a31dde4f-3d33-4112-beaf-6d1808d95e44
+2025-01-07 18:32:29 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 18:32:29 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 18:32:29 [INFO] Executing Step 1: CacheLookup
+2025-01-07 18:32:29 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 18:32:29 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Singapore,North America,43,6.901,0.03751,0.59448,0.78968,0.60268,0.21342,0.32957,0.11827,2.47489
+Sweden,Eastern Asia,2,3.34,0.03633,1.20806,1.34043,0.89284,0.35068,0.39928,0.24362,1.57059
+Bahrain,Western Europe,116,5.833,0.0326,0.37545,1.24711,0.93156,0.66246,0.28703,0.79588,2.27394
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me pie chart of happinees countries based on region based on GDP 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 18:32:29 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 18:32:33 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Singapore,North America,43,6.901,0.03751,0.59448,0.78968,0.60268,0.21342,0.32957,0.11827,2.47489
+Sweden,Eastern Asia,2,3.34,0.03633,1.20806,1.34043,0.89284,0.35068,0.39928,0.24362,1.57059
+Bahrain,Western Europe,116,5.833,0.0326,0.37545,1.24711,0.93156,0.66246,0.28703,0.79588,2.27394
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me pie chart of happinees countries based on region based on GDP 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 18:32:33 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+
+# Get the GDP data
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+
+# Group the data by region and calculate the mean GDP
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+
+# Create a pie chart of the mean GDP by region
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('gdp_by_region.png')
+
+# Declare result var: 
+result = { "type": "plot", "value": "gdp_by_region.png" }
+            ```
+            
+2025-01-07 18:32:33 [INFO] Executing Step 4: CachePopulation
+2025-01-07 18:32:33 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 18:32:33 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:32:33 [INFO] 
+Code running:
+```
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 18:32:33 [INFO] Executing Step 6: CodeExecution
+2025-01-07 18:32:33 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 18:32:33 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-07 18:32:33 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 18:32:33 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 18:32:33 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Singapore,North America,43,6.901,0.03751,0.59448,0.78968,0.60268,0.21342,0.32957,0.11827,2.47489
+Sweden,Eastern Asia,2,3.34,0.03633,1.20806,1.34043,0.89284,0.35068,0.39928,0.24362,1.57059
+Bahrain,Western Europe,116,5.833,0.0326,0.37545,1.24711,0.93156,0.66246,0.28703,0.79588,2.27394
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me pie chart of happinees countries based on region based on GDP 
+
+You generated this python code:
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 18:32:33 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 18:32:37 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Singapore,North America,43,6.901,0.03751,0.59448,0.78968,0.60268,0.21342,0.32957,0.11827,2.47489
+Sweden,Eastern Asia,2,3.34,0.03633,1.20806,1.34043,0.89284,0.35068,0.39928,0.24362,1.57059
+Bahrain,Western Europe,116,5.833,0.0326,0.37545,1.24711,0.93156,0.66246,0.28703,0.79588,2.27394
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me pie chart of happinees countries based on region based on GDP 
+
+You generated this python code:
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 18:32:37 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import pandas as pd
+
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-07 18:32:37 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 18:32:37 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:32:37 [INFO] 
+Code running:
+```
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 18:32:37 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 18:32:37 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-07 18:32:37 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 18:32:37 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 18:32:37 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Singapore,North America,43,6.901,0.03751,0.59448,0.78968,0.60268,0.21342,0.32957,0.11827,2.47489
+Sweden,Eastern Asia,2,3.34,0.03633,1.20806,1.34043,0.89284,0.35068,0.39928,0.24362,1.57059
+Bahrain,Western Europe,116,5.833,0.0326,0.37545,1.24711,0.93156,0.66246,0.28703,0.79588,2.27394
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me pie chart of happinees countries based on region based on GDP 
+
+You generated this python code:
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 18:32:37 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 18:32:40 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Singapore,North America,43,6.901,0.03751,0.59448,0.78968,0.60268,0.21342,0.32957,0.11827,2.47489
+Sweden,Eastern Asia,2,3.34,0.03633,1.20806,1.34043,0.89284,0.35068,0.39928,0.24362,1.57059
+Bahrain,Western Europe,116,5.833,0.0326,0.37545,1.24711,0.93156,0.66246,0.28703,0.79588,2.27394
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me pie chart of happinees countries based on region based on GDP 
+
+You generated this python code:
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 18:32:40 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import pandas as pd
+
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-07 18:32:40 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 18:32:40 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:32:40 [INFO] 
+Code running:
+```
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 18:32:41 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 18:32:41 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-07 18:32:41 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 18:32:41 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 18:32:41 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Singapore,North America,43,6.901,0.03751,0.59448,0.78968,0.60268,0.21342,0.32957,0.11827,2.47489
+Sweden,Eastern Asia,2,3.34,0.03633,1.20806,1.34043,0.89284,0.35068,0.39928,0.24362,1.57059
+Bahrain,Western Europe,116,5.833,0.0326,0.37545,1.24711,0.93156,0.66246,0.28703,0.79588,2.27394
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me pie chart of happinees countries based on region based on GDP 
+
+You generated this python code:
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 18:32:41 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 18:32:44 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Singapore,North America,43,6.901,0.03751,0.59448,0.78968,0.60268,0.21342,0.32957,0.11827,2.47489
+Sweden,Eastern Asia,2,3.34,0.03633,1.20806,1.34043,0.89284,0.35068,0.39928,0.24362,1.57059
+Bahrain,Western Europe,116,5.833,0.0326,0.37545,1.24711,0.93156,0.66246,0.28703,0.79588,2.27394
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me pie chart of happinees countries based on region based on GDP 
+
+You generated this python code:
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 18:32:44 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+import pandas as pd
+
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+            ```
+            
+2025-01-07 18:32:44 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 18:32:44 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:32:44 [INFO] 
+Code running:
+```
+gdp_data = dfs[0][['Country', 'Region', 'Economy (GDP per Capita)']]
+gdp_by_region = gdp_data.groupby('Region')['Economy (GDP per Capita)'].mean().reset_index()
+plt.pie(gdp_by_region['Economy (GDP per Capita)'], labels=gdp_by_region['Region'], autopct='%1.1f%%')
+plt.title('Mean GDP by Region')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 18:32:45 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 18:32:45 [ERROR] Pipeline failed on step 6: Value type <class 'str'> must match with type plot
+2025-01-07 18:33:13 [INFO] Question: can u give me correlation matrix (graph)
+2025-01-07 18:33:13 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-07 18:33:13 [INFO] Prompt ID: 0327d072-7874-4065-8eca-248ecf94d5f1
+2025-01-07 18:33:13 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-07 18:33:13 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-07 18:33:13 [INFO] Executing Step 1: CacheLookup
+2025-01-07 18:33:13 [INFO] Executing Step 2: PromptGeneration
+2025-01-07 18:33:13 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,North America,52,3.006,0.0613,0.45407,0.13995,0.83947,0.59625,0.00872,0.1686,1.79293
+Armenia,Australia and New Zealand,66,5.429,0.03589,1.15406,1.00964,0.94579,0.19184,0.21843,0.23027,2.44191
+Switzerland,Sub-Saharan Africa,121,4.565,0.05013,0.20868,0.67954,0.77361,0.55011,0.07521,0.22837,1.41723
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u give me correlation matrix (graph)
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-07 18:33:13 [INFO] Executing Step 3: CodeGenerator
+2025-01-07 18:33:16 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,North America,52,3.006,0.0613,0.45407,0.13995,0.83947,0.59625,0.00872,0.1686,1.79293
+Armenia,Australia and New Zealand,66,5.429,0.03589,1.15406,1.00964,0.94579,0.19184,0.21843,0.23027,2.44191
+Switzerland,Sub-Saharan Africa,121,4.565,0.05013,0.20868,0.67954,0.77361,0.55011,0.07521,0.22837,1.41723
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u give me correlation matrix (graph)
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-07 18:33:16 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Write code here
+
+# Calculate the correlation matrix
+corr_matrix = dfs[0].corr()
+
+# Generate a heatmap of the correlation matrix
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('correlation_matrix.png')
+
+# Declare result var: 
+result = { "type": "plot", "value": "correlation_matrix.png" }
+            ```
+            
+2025-01-07 18:33:16 [INFO] Executing Step 4: CachePopulation
+2025-01-07 18:33:16 [INFO] Executing Step 5: CodeCleaning
+2025-01-07 18:33:16 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Analysis bot\exports\charts\temp_chart.png
+2025-01-07 18:33:16 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+        ```
+2025-01-07 18:33:16 [INFO] Executing Step 6: CodeExecution
+2025-01-07 18:33:31 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-07 18:33:31 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-07 18:33:31 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 18:33:31 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 18:33:31 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,North America,52,3.006,0.0613,0.45407,0.13995,0.83947,0.59625,0.00872,0.1686,1.79293
+Armenia,Australia and New Zealand,66,5.429,0.03589,1.15406,1.00964,0.94579,0.19184,0.21843,0.23027,2.44191
+Switzerland,Sub-Saharan Africa,121,4.565,0.05013,0.20868,0.67954,0.77361,0.55011,0.07521,0.22837,1.41723
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-07 18:33:31 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 18:33:33 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,North America,52,3.006,0.0613,0.45407,0.13995,0.83947,0.59625,0.00872,0.1686,1.79293
+Armenia,Australia and New Zealand,66,5.429,0.03589,1.15406,1.00964,0.94579,0.19184,0.21843,0.23027,2.44191
+Switzerland,Sub-Saharan Africa,121,4.565,0.05013,0.20868,0.67954,0.77361,0.55011,0.07521,0.22837,1.41723
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Analysis bot/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 18:33:33 [INFO] Code generated:
+            ```
+            import seaborn as sns
+import matplotlib.pyplot as plt
+
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+            ```
+            
+2025-01-07 18:33:33 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 18:33:33 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+        ```
+2025-01-07 18:33:34 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-01-07 18:33:34 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-07 18:33:34 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 18:33:34 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 18:33:34 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,North America,52,3.006,0.0613,0.45407,0.13995,0.83947,0.59625,0.00872,0.1686,1.79293
+Armenia,Australia and New Zealand,66,5.429,0.03589,1.15406,1.00964,0.94579,0.19184,0.21843,0.23027,2.44191
+Switzerland,Sub-Saharan Africa,121,4.565,0.05013,0.20868,0.67954,0.77361,0.55011,0.07521,0.22837,1.41723
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-01-07 18:33:34 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 18:33:36 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,North America,52,3.006,0.0613,0.45407,0.13995,0.83947,0.59625,0.00872,0.1686,1.79293
+Armenia,Australia and New Zealand,66,5.429,0.03589,1.15406,1.00964,0.94579,0.19184,0.21843,0.23027,2.44191
+Switzerland,Sub-Saharan Africa,121,4.565,0.05013,0.20868,0.67954,0.77361,0.55011,0.07521,0.22837,1.41723
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 18:33:36 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+            ```
+            
+2025-01-07 18:33:36 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 18:33:36 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+        ```
+2025-01-07 18:33:36 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-01-07 18:33:36 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-07 18:33:36 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-07 18:33:36 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-07 18:33:36 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,North America,52,3.006,0.0613,0.45407,0.13995,0.83947,0.59625,0.00872,0.1686,1.79293
+Armenia,Australia and New Zealand,66,5.429,0.03589,1.15406,1.00964,0.94579,0.19184,0.21843,0.23027,2.44191
+Switzerland,Sub-Saharan Africa,121,4.565,0.05013,0.20868,0.67954,0.77361,0.55011,0.07521,0.22837,1.41723
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-01-07 18:33:36 [INFO] Executing Step 1: CodeGenerator
+2025-01-07 18:33:38 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovakia,North America,52,3.006,0.0613,0.45407,0.13995,0.83947,0.59625,0.00872,0.1686,1.79293
+Armenia,Australia and New Zealand,66,5.429,0.03589,1.15406,1.00964,0.94579,0.19184,0.21843,0.23027,2.44191
+Switzerland,Sub-Saharan Africa,121,4.565,0.05013,0.20868,0.67954,0.77361,0.55011,0.07521,0.22837,1.41723
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me correlation matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-07 18:33:38 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+            ```
+            
+2025-01-07 18:33:38 [INFO] Executing Step 2: CodeCleaning
+2025-01-07 18:33:38 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+        ```
+2025-01-07 18:33:39 [ERROR] Failed with error: Traceback (most recent call last):
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AUPP\AUPP Intern Project\Analysis bot\venv\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-01-07 18:33:39 [ERROR] Pipeline failed on step 6: No result returned

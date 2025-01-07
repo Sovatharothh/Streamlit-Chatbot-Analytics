@@ -18,9 +18,11 @@ llm = GoogleGemini(api_key=openai.api_key)
 # Streamlit web app configuration
 st.title("AUPPSearch")
 
-# Initialize conversation history in session state
+# Initialize session state
 if "conversation" not in st.session_state:
-    st.session_state.conversation = []
+    st.session_state.conversation = []  # List of messages
+if "plots" not in st.session_state:
+    st.session_state.plots = {}  # Dict to store plots with message index
 
 # File uploader
 uploaded_file = st.file_uploader("Upload a file (CSV, Excel, or JSON)")
@@ -49,41 +51,49 @@ if uploaded_file:
         st.error(f"Error reading file: {e}")
 
 # Display the chat history
-for message in st.session_state.conversation:
-    if message["role"] == "user":
+for i, message in enumerate(st.session_state.conversation):
+    role = message["role"]
+    content = message["content"]
+
+    # Render user message
+    if role == "user":
         with st.chat_message("user"):
-            st.markdown(message["content"])
-    elif message["role"] == "assistant":
+            st.markdown(content)
+
+    # Render assistant message and associated plot
+    elif role == "assistant":
         with st.chat_message("assistant"):
-            st.markdown(message["content"])
+            st.markdown(content)
+            if i in st.session_state.plots:
+                st.pyplot(fig=st.session_state.plots[i])
 
 # Chat input for user prompt
 prompt = st.chat_input("Enter your prompt")
 
-# Handle user input and assistant response
 if prompt:
-    # Display user's input message
+    # Display user input immediately
     with st.chat_message("user"):
         st.markdown(prompt)
     st.session_state.conversation.append({"role": "user", "content": prompt})
 
-    # Generate and display assistant's response
+    # Generate response from assistant
     with st.spinner("Generating response..."):
         try:
-            # Get response from SmartDataframe
+            # Process the user input with SmartDataframe
             response = sdf.chat(prompt)
 
-            # Save assistant response to session state
+            # Save assistant response
             st.session_state.conversation.append({"role": "assistant", "content": response})
 
-            # Display assistant's message
+            # Render assistant's message
             with st.chat_message("assistant"):
                 st.markdown(response)
 
-                # Only plot if a figure exists
-                if plt.get_fignums():  # Check for existing figures
-                    fig_to_plot = plt.gcf()
-                    st.pyplot(fig=fig_to_plot)
+                # Check if a plot was generated
+                if plt.get_fignums():
+                    fig_to_store = plt.gcf()  # Get the current figure
+                    st.session_state.plots[len(st.session_state.conversation) - 1] = fig_to_store
+                    st.pyplot(fig=fig_to_store)
 
         except Exception as e:
             error_message = f"Error: {e}"

@@ -1,8 +1,7 @@
 streamlit
-plotly
 pandas
 matplotlib
-seaborn
 pandasai
 openai
 python-dotenv
+pyyaml

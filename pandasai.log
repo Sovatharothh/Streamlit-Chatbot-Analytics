@@ -53018,3 +53018,765 @@ plt.title('Correlation Matrix')
 pandasai.exceptions.NoResultFoundError: No result returned
 
 2025-01-07 18:33:39 [ERROR] Pipeline failed on step 6: No result returned
+2025-01-08 15:24:36 [INFO] Question: give me top 5 happiness countirs
+2025-01-08 15:24:36 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-08 15:24:36 [INFO] Prompt ID: 3ce4f4d9-6f2a-4cea-b792-7c4f2ab7d9e9
+2025-01-08 15:24:36 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-08 15:24:36 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-08 15:24:36 [INFO] Executing Step 1: CacheLookup
+2025-01-08 15:24:36 [INFO] Executing Step 2: PromptGeneration
+2025-01-08 15:24:36 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Madagascar,Sub-Saharan Africa,120,4.194,0.03225,1.25114,0.91612,0.56874,0.48181,0.17521,0.18401,1.55674
+Serbia,Latin America and Caribbean,9,5.013,0.03411,1.2074,0.92933,0.59772,0.24499,0.08079,0.3323,2.4657
+Canada,Southern Asia,89,4.307,0.03633,1.33723,0.54447,0.94784,0.62545,0.1806,0.43562,1.6488
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me top 5 happiness countirs
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-08 15:24:36 [INFO] Executing Step 3: CodeGenerator
+2025-01-08 15:24:38 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Madagascar,Sub-Saharan Africa,120,4.194,0.03225,1.25114,0.91612,0.56874,0.48181,0.17521,0.18401,1.55674
+Serbia,Latin America and Caribbean,9,5.013,0.03411,1.2074,0.92933,0.59772,0.24499,0.08079,0.3323,2.4657
+Canada,Southern Asia,89,4.307,0.03633,1.33723,0.54447,0.94784,0.62545,0.1806,0.43562,1.6488
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me top 5 happiness countirs
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-08 15:24:38 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+top_5_happiness_countries = dfs[0].sort_values(by='Happiness Score', ascending=False).head(5)
+
+# Declare result var: 
+result = { "type": "dataframe", "value": top_5_happiness_countries }
+            ```
+            
+2025-01-08 15:24:39 [INFO] Executing Step 4: CachePopulation
+2025-01-08 15:24:39 [INFO] Executing Step 5: CodeCleaning
+2025-01-08 15:24:39 [INFO] 
+Code running:
+```
+top_5_happiness_countries = dfs[0].sort_values(by='Happiness Score', ascending=False).head(5)
+result = {'type': 'dataframe', 'value': top_5_happiness_countries}
+        ```
+2025-01-08 15:24:39 [INFO] Executing Step 6: CodeExecution
+2025-01-08 15:24:39 [INFO] Executing Step 7: ResultValidation
+2025-01-08 15:24:39 [INFO] Answer: {'type': 'dataframe', 'value':        Country          Region  Happiness Rank  ...  Trust (Government Corruption)  Generosity  Dystopia Residual
+0  Switzerland  Western Europe               1  ...                        0.41978     0.29678            2.51738
+1      Iceland  Western Europe               2  ...                        0.14145     0.43630            2.70201
+2      Denmark  Western Europe               3  ...                        0.48357     0.34139            2.49204
+3       Norway  Western Europe               4  ...                        0.36503     0.34699            2.46531
+4       Canada   North America               5  ...                        0.32957     0.45811            2.45176
+
+[5 rows x 12 columns]}
+2025-01-08 15:24:39 [INFO] Executing Step 8: ResultParsing
+2025-01-08 15:25:07 [INFO] Question: expalin all data about
+2025-01-08 15:25:07 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-08 15:25:07 [INFO] Prompt ID: b09c899d-1b4d-4945-a8d9-b5a5e114a2d5
+2025-01-08 15:25:07 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-08 15:25:07 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-08 15:25:07 [INFO] Executing Step 1: CacheLookup
+2025-01-08 15:25:07 [INFO] Executing Step 2: PromptGeneration
+2025-01-08 15:25:07 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Portugal,North America,127,4.507,0.08658,1.10715,1.22791,0.6739,0.57672,0.10062,0.128,1.86565
+Montenegro,Western Europe,80,7.2,0.0558,0.31982,0.77711,0.79075,0.50442,0.09472,0.20618,2.27394
+United Kingdom,Australia and New Zealand,141,3.896,0.03411,1.15991,1.02507,0.41435,0.45951,0.306,0.219,1.83302
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ expalin all data about
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-08 15:25:07 [INFO] Executing Step 3: CodeGenerator
+2025-01-08 15:25:09 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Portugal,North America,127,4.507,0.08658,1.10715,1.22791,0.6739,0.57672,0.10062,0.128,1.86565
+Montenegro,Western Europe,80,7.2,0.0558,0.31982,0.77711,0.79075,0.50442,0.09472,0.20618,2.27394
+United Kingdom,Australia and New Zealand,141,3.896,0.03411,1.15991,1.02507,0.41435,0.45951,0.306,0.219,1.83302
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ expalin all data about
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-08 15:25:09 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+result = {
+    "type": "dataframe",
+    "value": dfs[0]
+}
+            ```
+            
+2025-01-08 15:25:09 [INFO] Executing Step 4: CachePopulation
+2025-01-08 15:25:09 [INFO] Executing Step 5: CodeCleaning
+2025-01-08 15:25:09 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0]}
+        ```
+2025-01-08 15:25:09 [INFO] Executing Step 6: CodeExecution
+2025-01-08 15:25:09 [INFO] Executing Step 7: ResultValidation
+2025-01-08 15:25:09 [INFO] Answer: {'type': 'dataframe', 'value':          Country                           Region  ...  Generosity  Dystopia Residual
+0    Switzerland                   Western Europe  ...     0.29678            2.51738
+1        Iceland                   Western Europe  ...     0.43630            2.70201
+2        Denmark                   Western Europe  ...     0.34139            2.49204
+3         Norway                   Western Europe  ...     0.34699            2.46531
+4         Canada                    North America  ...     0.45811            2.45176
+..           ...                              ...  ...         ...                ...
+153       Rwanda               Sub-Saharan Africa  ...     0.22628            0.67042
+154        Benin               Sub-Saharan Africa  ...     0.18260            1.63328
+155        Syria  Middle East and Northern Africa  ...     0.47179            0.32858
+156      Burundi               Sub-Saharan Africa  ...     0.19727            1.83302
+157         Togo               Sub-Saharan Africa  ...     0.16681            1.56726
+
+[158 rows x 12 columns]}
+2025-01-08 15:25:09 [INFO] Executing Step 8: ResultParsing
+2025-01-08 15:25:26 [INFO] Question: give me correltion matrix 
+2025-01-08 15:25:26 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-08 15:25:26 [INFO] Prompt ID: d6a727f7-3848-4e13-a63d-d08a78ba2497
+2025-01-08 15:25:26 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-08 15:25:26 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-08 15:25:26 [INFO] Executing Step 1: CacheLookup
+2025-01-08 15:25:26 [INFO] Executing Step 2: PromptGeneration
+2025-01-08 15:25:26 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovenia,North America,58,5.855,0.0464,0.39047,1.30203,0.22562,0.09245,0.10713,0.2831,2.67585
+Sierra Leone,Sub-Saharan Africa,18,5.399,0.04367,0.28665,1.29704,0.64045,0.20107,0.00227,0.06431,2.32142
+Canada,Latin America and Caribbean,11,2.839,0.03595,1.18498,0.41411,0.77361,0.31767,0.1809,0.1686,1.9521
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me correltion matrix 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-08 15:25:26 [INFO] Executing Step 3: CodeGenerator
+2025-01-08 15:25:29 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Slovenia,North America,58,5.855,0.0464,0.39047,1.30203,0.22562,0.09245,0.10713,0.2831,2.67585
+Sierra Leone,Sub-Saharan Africa,18,5.399,0.04367,0.28665,1.29704,0.64045,0.20107,0.00227,0.06431,2.32142
+Canada,Latin America and Caribbean,11,2.839,0.03595,1.18498,0.41411,0.77361,0.31767,0.1809,0.1686,1.9521
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me correltion matrix 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-08 15:25:29 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+corr_matrix = dfs[0].corr()
+
+# Declare result var: 
+result = { "type": "dataframe", "value": corr_matrix }
+            ```
+            
+2025-01-08 15:25:29 [INFO] Executing Step 4: CachePopulation
+2025-01-08 15:25:29 [INFO] Executing Step 5: CodeCleaning
+2025-01-08 15:25:29 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+result = {'type': 'dataframe', 'value': corr_matrix}
+        ```
+2025-01-08 15:25:29 [INFO] Executing Step 6: CodeExecution
+2025-01-08 15:25:29 [INFO] Executing Step 7: ResultValidation
+2025-01-08 15:25:29 [INFO] Answer: {'type': 'dataframe', 'value':                                Happiness Rank  Happiness Score  ...  Generosity  Dystopia Residual
+Happiness Rank                       1.000000        -0.992105  ...   -0.160142          -0.521999
+Happiness Score                     -0.992105         1.000000  ...    0.180319           0.530474
+Standard Error                       0.158516        -0.177254  ...   -0.088439           0.083981
+Economy (GDP per Capita)            -0.785267         0.780966  ...   -0.010465           0.040059
+Family                              -0.733644         0.740605  ...    0.087513           0.148117
+Health (Life Expectancy)            -0.735613         0.724200  ...    0.108335           0.018979
+Freedom                             -0.556886         0.568211  ...    0.373916           0.062783
+Trust (Government Corruption)       -0.372315         0.395199  ...    0.276123          -0.033105
+Generosity                          -0.160142         0.180319  ...    1.000000          -0.101301
+Dystopia Residual                   -0.521999         0.530474  ...   -0.101301           1.000000
+
+[10 rows x 10 columns]}
+2025-01-08 15:25:29 [INFO] Executing Step 8: ResultParsing
+2025-01-08 15:25:36 [INFO] Question: give me correltion matrix (graph)
+2025-01-08 15:25:36 [INFO] Running PandasAI with google-gemini LLM...
+2025-01-08 15:25:36 [INFO] Prompt ID: 5b888258-0428-43d9-a2b1-207f8e35692e
+2025-01-08 15:25:36 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-01-08 15:25:36 [INFO] Executing Step 0: ValidatePipelineInput
+2025-01-08 15:25:36 [INFO] Executing Step 1: CacheLookup
+2025-01-08 15:25:36 [INFO] Executing Step 2: PromptGeneration
+2025-01-08 15:25:36 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Uganda,North America,111,6.611,0.04324,1.69042,1.00268,0.7095,0.37938,0.38331,0.16893,2.00073
+Jordan,Eastern Asia,42,5.429,0.05635,1.18498,1.16594,0.74716,0.51697,0.41372,0.19387,1.6488
+Japan,Southeastern Asia,86,4.436,0.03499,1.05351,0.91916,0.80925,0.20107,0.41978,0.43562,0.65429
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me correltion matrix (graph)
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-01-08 15:25:36 [INFO] Executing Step 3: CodeGenerator
+2025-01-08 15:25:40 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Uganda,North America,111,6.611,0.04324,1.69042,1.00268,0.7095,0.37938,0.38331,0.16893,2.00073
+Jordan,Eastern Asia,42,5.429,0.05635,1.18498,1.16594,0.74716,0.51697,0.41372,0.19387,1.6488
+Japan,Southeastern Asia,86,4.436,0.03499,1.05351,0.91916,0.80925,0.20107,0.41978,0.43562,0.65429
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ give me correltion matrix (graph)
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-01-08 15:25:40 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Write code here
+
+# Calculate the correlation matrix
+corr_matrix = dfs[0].corr()
+
+# Generate a heatmap of the correlation matrix
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('correlation_matrix.png')
+
+# Declare result var: 
+result = { "type": "plot", "value": "correlation_matrix.png" }
+            ```
+            
+2025-01-08 15:25:40 [INFO] Executing Step 4: CachePopulation
+2025-01-08 15:25:40 [INFO] Executing Step 5: CodeCleaning
+2025-01-08 15:25:40 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Chatbot\Streamlit-Chatbot-Analytics\exports\charts\temp_chart.png
+2025-01-08 15:25:40 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+        ```
+2025-01-08 15:25:40 [INFO] Executing Step 6: CodeExecution
+2025-01-08 15:25:56 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-01-08 15:25:56 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-01-08 15:25:56 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-08 15:25:56 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-08 15:25:56 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Uganda,North America,111,6.611,0.04324,1.69042,1.00268,0.7095,0.37938,0.38331,0.16893,2.00073
+Jordan,Eastern Asia,42,5.429,0.05635,1.18498,1.16594,0.74716,0.51697,0.41372,0.19387,1.6488
+Japan,Southeastern Asia,86,4.436,0.03499,1.05351,0.91916,0.80925,0.20107,0.41978,0.43562,0.65429
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me correltion matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-01-08 15:25:56 [INFO] Executing Step 1: CodeGenerator
+2025-01-08 15:25:59 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Uganda,North America,111,6.611,0.04324,1.69042,1.00268,0.7095,0.37938,0.38331,0.16893,2.00073
+Jordan,Eastern Asia,42,5.429,0.05635,1.18498,1.16594,0.74716,0.51697,0.41372,0.19387,1.6488
+Japan,Southeastern Asia,86,4.436,0.03499,1.05351,0.91916,0.80925,0.20107,0.41978,0.43562,0.65429
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me correltion matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-08 15:25:59 [INFO] Code generated:
+            ```
+            import seaborn as sns
+import matplotlib.pyplot as plt
+
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+            ```
+            
+2025-01-08 15:25:59 [INFO] Executing Step 2: CodeCleaning
+2025-01-08 15:25:59 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+        ```
+2025-01-08 15:25:59 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-01-08 15:25:59 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-01-08 15:25:59 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-08 15:25:59 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-08 15:25:59 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Uganda,North America,111,6.611,0.04324,1.69042,1.00268,0.7095,0.37938,0.38331,0.16893,2.00073
+Jordan,Eastern Asia,42,5.429,0.05635,1.18498,1.16594,0.74716,0.51697,0.41372,0.19387,1.6488
+Japan,Southeastern Asia,86,4.436,0.03499,1.05351,0.91916,0.80925,0.20107,0.41978,0.43562,0.65429
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me correltion matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-01-08 15:25:59 [INFO] Executing Step 1: CodeGenerator
+2025-01-08 15:26:01 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Uganda,North America,111,6.611,0.04324,1.69042,1.00268,0.7095,0.37938,0.38331,0.16893,2.00073
+Jordan,Eastern Asia,42,5.429,0.05635,1.18498,1.16594,0.74716,0.51697,0.41372,0.19387,1.6488
+Japan,Southeastern Asia,86,4.436,0.03499,1.05351,0.91916,0.80925,0.20107,0.41978,0.43562,0.65429
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me correltion matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-08 15:26:01 [INFO] Code generated:
+            ```
+            import seaborn as sns
+import matplotlib.pyplot as plt
+
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+            ```
+            
+2025-01-08 15:26:01 [INFO] Executing Step 2: CodeCleaning
+2025-01-08 15:26:01 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+        ```
+2025-01-08 15:26:02 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-01-08 15:26:02 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-01-08 15:26:02 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-01-08 15:26:02 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-01-08 15:26:02 [INFO] Using prompt: <dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Uganda,North America,111,6.611,0.04324,1.69042,1.00268,0.7095,0.37938,0.38331,0.16893,2.00073
+Jordan,Eastern Asia,42,5.429,0.05635,1.18498,1.16594,0.74716,0.51697,0.41372,0.19387,1.6488
+Japan,Southeastern Asia,86,4.436,0.03499,1.05351,0.91916,0.80925,0.20107,0.41978,0.43562,0.65429
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me correltion matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2025-01-08 15:26:02 [INFO] Executing Step 1: CodeGenerator
+2025-01-08 15:26:04 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:158x12
+Country,Region,Happiness Rank,Happiness Score,Standard Error,Economy (GDP per Capita),Family,Health (Life Expectancy),Freedom,Trust (Government Corruption),Generosity,Dystopia Residual
+Uganda,North America,111,6.611,0.04324,1.69042,1.00268,0.7095,0.37938,0.38331,0.16893,2.00073
+Jordan,Eastern Asia,42,5.429,0.05635,1.18498,1.16594,0.74716,0.51697,0.41372,0.19387,1.6488
+Japan,Southeastern Asia,86,4.436,0.03499,1.05351,0.91916,0.80925,0.20107,0.41978,0.43562,0.65429
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ give me correltion matrix (graph)
+
+You generated this python code:
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2025-01-08 15:26:04 [INFO] Code generated:
+            ```
+            import seaborn as sns
+import matplotlib.pyplot as plt
+
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+            ```
+            
+2025-01-08 15:26:04 [INFO] Executing Step 2: CodeCleaning
+2025-01-08 15:26:04 [INFO] 
+Code running:
+```
+corr_matrix = dfs[0].corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr_matrix, annot=True)
+plt.title('Correlation Matrix')
+        ```
+2025-01-08 15:26:04 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 178, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2025-01-08 15:26:04 [ERROR] Pipeline failed on step 6: No result returned

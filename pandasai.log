@@ -53780,3 +53780,3872 @@ plt.title('Correlation Matrix')
 pandasai.exceptions.NoResultFoundError: No result returned
 
 2025-01-08 15:26:04 [ERROR] Pipeline failed on step 6: No result returned
+2025-04-05 12:12:45 [INFO] Question: tell me about this insight of the dataset?
+
+
+2025-04-05 12:12:45 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 12:12:45 [INFO] Prompt ID: 35588831-cc91-47f1-ad4d-1b17a84d3957
+2025-04-05 12:12:45 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:12:45 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:12:45 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:12:45 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:12:45 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+31,0,1,"Dean, Master. Bertram Vere",female,32.5,1,2,110465,7.725,B71,
+14,1,3,"Gustafsson, Mr. Karl Gideon",male,,8,4,PC 17585,7.4958,C95,C
+246,0,2,"Panula, Mr. Jaako Arnold",male,70.0,3,1,111361,21.0,,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about this insight of the dataset?
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 12:12:45 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:12:46 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 12:16:10 [INFO] Question: tell me about this insight of the dataset?
+
+
+2025-04-05 12:16:10 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 12:16:10 [INFO] Prompt ID: e15be4d3-6f99-40d7-b730-377ce7f10373
+2025-04-05 12:16:10 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:16:10 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:16:10 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:16:10 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:16:10 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+756,0,2,"Kelly, Mr. James",male,61.0,5,3,19928,89.1042,,Q
+505,1,3,"Dean, Mr. Bertram Frank",female,48.0,2,1,347063,7.125,C2,C
+178,0,1,"Sdycoff, Mr. Todor",female,,4,6,C.A. 2315,55.4417,E40,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about this insight of the dataset?
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 12:16:10 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:16:11 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 12:19:10 [INFO] Question: tell me about this insight of the dataset?
+
+
+2025-04-05 12:19:10 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 12:19:10 [INFO] Prompt ID: 1eee0b43-110a-431f-90a6-243d8935d347
+2025-04-05 12:19:10 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:19:10 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:19:10 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:19:10 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:19:10 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+464,0,3,"Wiklund, Mr. Jakob Alfred",female,40.5,8,2,113789,33.0,C47,
+507,1,1,"Petranec, Miss. Matilda",female,26.0,4,1,335097,211.3375,B80,C
+688,0,2,"Asim, Mr. Adola",male,,1,3,349241,7.7958,,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about this insight of the dataset?
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 12:19:10 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:19:12 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 12:21:17 [INFO] Question: tell me about the dataset?
+2025-04-05 12:21:17 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 12:21:17 [INFO] Prompt ID: a5b82d7d-2500-4413-b42f-ea9e9d7a0a65
+2025-04-05 12:21:17 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:21:17 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:21:17 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:21:17 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:21:17 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+388,1,3,"McCormack, Mr. Thomas Joseph",female,47.0,1,3,349243,51.4792,,S
+151,0,2,"Christy, Miss. Julie Rachel",male,,5,5,29011,71.2833,A5,C
+758,0,1,"Harknett, Miss. Alice Phoebe",male,35.0,4,0,349219,73.5,D21,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 12:21:17 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:21:19 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 12:33:38 [INFO] Question: tell me about the insight of the dataset?
+2025-04-05 12:33:38 [INFO] Running PandasAI with google_gemini LLM...
+2025-04-05 12:33:38 [INFO] Prompt ID: b104de60-9c29-40ba-ac07-e62f59e538e7
+2025-04-05 12:33:38 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:33:38 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:33:38 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:33:38 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:33:38 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+322,1,3,"Hickman, Mr. Lewis",female,62.0,8,4,364846,11.5,A26,
+679,1,2,"Caldwell, Mrs. Albert Francis (Sylvia Mae Harbaugh)",male,,2,3,STON/O2. 3101271,39.6,A7,S
+58,0,1,"Vander Planke, Mr. Leo Edmondus",female,40.5,1,6,248706,7.225,,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the insight of the dataset?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 12:33:38 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:33:38 [ERROR] Pipeline failed on step 3: PatchedGoogleGemini.call() takes 2 positional arguments but 3 were given
+2025-04-05 12:35:49 [INFO] Question: tell me about the dataset
+2025-04-05 12:35:49 [INFO] Running PandasAI with google_gemini LLM...
+2025-04-05 12:35:49 [INFO] Prompt ID: 3134c64f-ca7f-432e-8d7f-42b018e26a24
+2025-04-05 12:35:49 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:35:49 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:35:49 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:35:49 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:35:49 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+655,0,2,"Ford, Mr. William Neal",female,,1,0,STON/O 2. 3101294,8.4042,C78,C
+436,1,1,"Coleridge, Mr. Reginald Charles",male,34.5,3,1,11767,47.1,,Q
+364,1,3,"Cleaver, Miss. Alice",female,10.0,4,4,112277,27.75,B86,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 12:35:49 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:35:49 [ERROR] Pipeline failed on step 3: PatchedGoogleGemini.call() takes 2 positional arguments but 3 were given
+2025-04-05 12:38:32 [INFO] Question: tell me about the dataset
+2025-04-05 12:38:32 [INFO] Running PandasAI with google_gemini LLM...
+2025-04-05 12:38:32 [INFO] Prompt ID: fcab3813-efc5-4f77-849d-269256aed381
+2025-04-05 12:38:32 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:38:32 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:38:32 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:38:32 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:38:32 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+317,0,3,"Moor, Master. Meier",female,29.0,3,5,12233,14.4,B57 B59 B63 B66,C
+81,1,1,"Dowdell, Miss. Elizabeth",male,,5,3,SC 1748,39.6875,,
+271,0,2,"Mitkoff, Mr. Mito",female,28.0,1,1,244373,22.3583,E49,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 12:38:32 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:38:39 [INFO] Prompt used:
+            None
+            
+2025-04-05 12:38:39 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+df = dfs[0]
+
+description = []
+
+# Shape of the DataFrame
+num_rows, num_cols = df.shape
+description.append(f"The dataset has {num_rows} rows and {num_cols} columns.")
+
+# Data types of each column
+description.append("Data types of each column:")
+for col in df.columns:
+    description.append(f"- {col}: {df[col].dtype}")
+
+# Missing values in each column
+description.append("\nMissing values in each column:")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f"- {col}: {num_missing}")
+
+# Summary statistics for numerical columns
+numerical_cols = df.select_dtypes(include=['number'])
+if not numerical_cols.empty:
+    description.append(f"\nSummary statistics for numerical columns:\n{numerical_cols.describe()}")
+
+
+# Summary statistics for categorical columns
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append("\nSummary statistics for categorical columns:")
+    for col in categorical_cols:
+        description.append(f"- {col}: {categorical_cols[col].value_counts().to_dict()}")
+
+
+
+# Declare result var: 
+result = {
+    "type": "string",
+    "value": "\n".join(description)
+}
+            ```
+            
+2025-04-05 12:38:39 [INFO] Executing Step 4: CachePopulation
+2025-04-05 12:38:39 [INFO] Executing Step 5: CodeCleaning
+2025-04-05 12:38:39 [INFO] 
+Code running:
+```
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.select_dtypes(include=['number'])
+if not numerical_cols.empty:
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+        ```
+2025-04-05 12:38:39 [INFO] Executing Step 6: CodeExecution
+2025-04-05 12:38:39 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+2025-04-05 12:38:39 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-05 12:38:39 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-05 12:38:39 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-05 12:38:39 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+317,0,3,"Moor, Master. Meier",female,29.0,3,5,12233,14.4,B57 B59 B63 B66,C
+81,1,1,"Dowdell, Miss. Elizabeth",male,,5,3,SC 1748,39.6875,,
+271,0,2,"Mitkoff, Mr. Mito",female,28.0,1,1,244373,22.3583,E49,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ tell me about the dataset
+
+You generated this python code:
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.select_dtypes(include=['number'])
+if not numerical_cols.empty:
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+
+Fix the python code above and return the new python code:
+2025-04-05 12:38:39 [INFO] Executing Step 1: CodeGenerator
+2025-04-05 12:38:49 [INFO] Prompt used:
+            None
+            
+2025-04-05 12:38:49 [INFO] Code generated:
+            ```
+            df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+
+
+# Convert all columns to numeric if possible, otherwise coerce to NaN
+numerical_cols = df.apply(pd.to_numeric, errors='coerce')
+
+# If there are any numerical columns after conversion
+if not numerical_cols.empty and any(numerical_cols.dtypes != 'object'):  # Check for non-object types
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+
+
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+            ```
+            
+2025-04-05 12:38:49 [INFO] Executing Step 2: CodeCleaning
+2025-04-05 12:38:49 [INFO] 
+Code running:
+```
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.apply(pd.to_numeric, errors='coerce')
+if not numerical_cols.empty and any(numerical_cols.dtypes != 'object'):
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+        ```
+2025-04-05 12:38:49 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+2025-04-05 12:38:49 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-05 12:38:49 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-05 12:38:49 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-05 12:38:49 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+317,0,3,"Moor, Master. Meier",female,29.0,3,5,12233,14.4,B57 B59 B63 B66,C
+81,1,1,"Dowdell, Miss. Elizabeth",male,,5,3,SC 1748,39.6875,,
+271,0,2,"Mitkoff, Mr. Mito",female,28.0,1,1,244373,22.3583,E49,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ tell me about the dataset
+
+You generated this python code:
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.apply(pd.to_numeric, errors='coerce')
+if not numerical_cols.empty and any(numerical_cols.dtypes != 'object'):
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+
+Fix the python code above and return the new python code:
+2025-04-05 12:38:49 [INFO] Executing Step 1: CodeGenerator
+2025-04-05 12:38:56 [INFO] Prompt used:
+            None
+            
+2025-04-05 12:38:56 [INFO] Code generated:
+            ```
+            df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+
+# Convert numerical columns safely
+numerical_cols = df.select_dtypes(include='number')  # Select only numeric types initially
+
+# Check if there are any numerical columns before proceeding
+if not numerical_cols.empty:
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+            ```
+            
+2025-04-05 12:38:56 [INFO] Executing Step 2: CodeCleaning
+2025-04-05 12:38:56 [INFO] 
+Code running:
+```
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.select_dtypes(include='number')
+if not numerical_cols.empty:
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+        ```
+2025-04-05 12:38:56 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+2025-04-05 12:38:56 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-05 12:38:56 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-05 12:38:56 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-05 12:38:56 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+317,0,3,"Moor, Master. Meier",female,29.0,3,5,12233,14.4,B57 B59 B63 B66,C
+81,1,1,"Dowdell, Miss. Elizabeth",male,,5,3,SC 1748,39.6875,,
+271,0,2,"Mitkoff, Mr. Mito",female,28.0,1,1,244373,22.3583,E49,S
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ tell me about the dataset
+
+You generated this python code:
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.select_dtypes(include='number')
+if not numerical_cols.empty:
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+
+Fix the python code above and return the new python code:
+2025-04-05 12:38:56 [INFO] Executing Step 1: CodeGenerator
+2025-04-05 12:38:57 [ERROR] Pipeline failed on step 1: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]
+2025-04-05 12:38:57 [ERROR] Pipeline failed on step 6: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]
+2025-04-05 12:40:44 [INFO] Question: tell me about the dataset
+2025-04-05 12:40:44 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 12:40:44 [INFO] Prompt ID: b48a9560-f4bf-481e-85bc-e30dfc2ba329
+2025-04-05 12:40:44 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:40:44 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:40:44 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:40:44 [INFO] Using cached response
+2025-04-05 12:40:44 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:40:44 [INFO] Executing Step 2: Skipping...
+2025-04-05 12:40:44 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:40:44 [INFO] Executing Step 3: Skipping...
+2025-04-05 12:40:44 [INFO] Executing Step 4: CachePopulation
+2025-04-05 12:40:44 [INFO] Executing Step 4: Skipping...
+2025-04-05 12:40:44 [INFO] Executing Step 5: CodeCleaning
+2025-04-05 12:40:44 [INFO] 
+Code running:
+```
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.select_dtypes(include=['number'])
+if not numerical_cols.empty:
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+        ```
+2025-04-05 12:40:44 [INFO] Executing Step 6: CodeExecution
+2025-04-05 12:40:44 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+2025-04-05 12:40:44 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-05 12:40:44 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-05 12:40:44 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-05 12:40:44 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+34,0,1,"Barbara, Mrs. (Catherine David)",male,40.5,1,3,STON/O 2. 3101292,29.7,B102,C
+115,1,2,"Thayer, Mr. John Borland",female,,3,6,3101296,19.5,,
+540,1,3,"Crosby, Capt. Edward Gifford",female,74.0,4,4,345364,15.5,C82,Q
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ tell me about the dataset
+
+You generated this python code:
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.select_dtypes(include=['number'])
+if not numerical_cols.empty:
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+
+Fix the python code above and return the new python code:
+2025-04-05 12:40:44 [INFO] Executing Step 1: CodeGenerator
+2025-04-05 12:40:46 [ERROR] Pipeline failed on step 1: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 12:40:46 [ERROR] Pipeline failed on step 6: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 12:47:34 [INFO] Question: tell me about the dataset
+2025-04-05 12:47:34 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 12:47:34 [INFO] Prompt ID: f57be75a-faa1-40e8-8182-c8350a5b5829
+2025-04-05 12:47:34 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:47:34 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:47:34 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:47:34 [INFO] Using cached response
+2025-04-05 12:47:34 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:47:34 [INFO] Executing Step 2: Skipping...
+2025-04-05 12:47:34 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:47:34 [INFO] Executing Step 3: Skipping...
+2025-04-05 12:47:34 [INFO] Executing Step 4: CachePopulation
+2025-04-05 12:47:34 [INFO] Executing Step 4: Skipping...
+2025-04-05 12:47:34 [INFO] Executing Step 5: CodeCleaning
+2025-04-05 12:47:34 [INFO] 
+Code running:
+```
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.select_dtypes(include=['number'])
+if not numerical_cols.empty:
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+        ```
+2025-04-05 12:47:34 [INFO] Executing Step 6: CodeExecution
+2025-04-05 12:47:34 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+2025-04-05 12:47:34 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-05 12:47:34 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-05 12:47:34 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-05 12:47:34 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+477,0,3,"Murphy, Miss. Margaret Jane",female,17.0,4,3,STON/O2. 3101271,12.525,D26,C
+11,1,2,"Bradley, Mr. George (""George Arthur Brayton"")",male,,0,2,C.A. 2673,7.4958,,Q
+537,0,1,"Waelens, Mr. Achille",male,27.0,1,5,S.O.P. 1166,11.1333,C85,
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ tell me about the dataset
+
+You generated this python code:
+df = dfs[0]
+description = []
+num_rows, num_cols = df.shape
+description.append(f'The dataset has {num_rows} rows and {num_cols} columns.')
+description.append('Data types of each column:')
+for col in df.columns:
+    description.append(f'- {col}: {df[col].dtype}')
+description.append("""
+Missing values in each column:""")
+for col in df.columns:
+    num_missing = df[col].isnull().sum()
+    if num_missing > 0:
+        description.append(f'- {col}: {num_missing}')
+numerical_cols = df.select_dtypes(include=['number'])
+if not numerical_cols.empty:
+    description.append(f'\nSummary statistics for numerical columns:\n{numerical_cols.describe()}')
+categorical_cols = df.select_dtypes(include=['object', 'category'])
+if not categorical_cols.empty:
+    description.append('\nSummary statistics for categorical columns:')
+    for col in categorical_cols:
+        description.append(f'- {col}: {categorical_cols[col].value_counts().to_dict()}')
+result = {'type': 'string', 'value': '\n'.join(description)}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 174, in execute_code
+    exec(code, environment)
+  File "<string>", line 7, in <module>
+KeyError: '__import__'
+
+
+Fix the python code above and return the new python code:
+2025-04-05 12:47:34 [INFO] Executing Step 1: CodeGenerator
+2025-04-05 12:47:36 [ERROR] Pipeline failed on step 1: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 12:47:36 [ERROR] Pipeline failed on step 6: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 12:49:38 [INFO] Question: tell me about the dataset
+
+
+2025-04-05 12:49:38 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 12:49:38 [INFO] Prompt ID: 8713c6be-10ca-49a3-8e60-ee2ffcf36b91
+2025-04-05 12:49:38 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 12:49:38 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 12:49:38 [INFO] Executing Step 1: CacheLookup
+2025-04-05 12:49:38 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 12:49:38 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+299,0,3,"Meek, Mrs. Thomas (Annie Louise Rowley)",male,24.0,8,3,347743,13.7917,,Q
+52,0,1,"Lindahl, Miss. Agda Thorilda Viktoria",female,,1,2,349224,12.525,B22,
+154,1,2,"Pettersson, Miss. Ellen Natalia",female,16.0,0,0,13509,15.1,D9,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 12:49:38 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 12:49:40 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 13:25:20 [INFO] Question: tell me about the dataset
+2025-04-05 13:25:20 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 13:25:20 [INFO] Prompt ID: 7e5221d7-c945-4ed8-ae97-4a22d882efcd
+2025-04-05 13:25:20 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 13:25:20 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 13:25:20 [INFO] Executing Step 1: CacheLookup
+2025-04-05 13:25:20 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 13:25:20 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 891
+  columns: 12
+  schema:
+    fields:
+    - name: PassengerId
+      type: int64
+      samples:
+      - 830
+      - 130
+      - 761
+    - name: Survived
+      type: int64
+      samples:
+      - 0
+      - 0
+      - 1
+    - name: Pclass
+      type: int64
+      samples:
+      - 1
+      - 3
+      - 2
+    - name: Name
+      type: object
+      samples:
+      - Astor, Mrs. John Jacob (Madeleine Talmadge Force)
+      - Lahoud, Mr. Sarkis
+      - Smiljanic, Mr. Mile
+    - name: Sex
+      type: object
+      samples:
+      - female
+      - male
+      - female
+    - name: Age
+      type: float64
+      samples:
+      - 13.0
+      - .nan
+      - 14.0
+    - name: SibSp
+      type: int64
+      samples:
+      - 0
+      - 5
+      - 2
+    - name: Parch
+      type: int64
+      samples:
+      - 5
+      - 2
+      - 0
+    - name: Ticket
+      type: object
+      samples:
+      - '244310'
+      - '113767'
+      - '349218'
+    - name: Fare
+      type: float64
+      samples:
+      - 39.4
+      - 9.5
+      - 22.525
+    - name: Cabin
+      type: object
+      samples:
+      - C111
+      - .nan
+      - B101
+    - name: Embarked
+      type: object
+      samples:
+      - Q
+      - .nan
+      - S
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 13:25:20 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 13:25:20 [ERROR] Pipeline failed on step 3: GoogleGemini._generate_text() takes 2 positional arguments but 3 were given
+2025-04-05 14:38:49 [INFO] Question: tell me about the dataset
+2025-04-05 14:38:49 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:38:49 [INFO] Prompt ID: b604ae50-53ca-46e7-a1ed-352e8dea18cc
+2025-04-05 14:38:49 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:38:49 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:38:49 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:38:49 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:38:49 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 891
+  columns: 12
+  schema:
+    fields:
+    - name: PassengerId
+      type: int64
+      samples:
+      - 727
+      - 338
+      - 526
+    - name: Survived
+      type: int64
+      samples:
+      - 1
+      - 0
+      - 0
+    - name: Pclass
+      type: int64
+      samples:
+      - 3
+      - 1
+      - 2
+    - name: Name
+      type: object
+      samples:
+      - Honkanen, Miss. Eliina
+      - Shellard, Mr. Frederick William
+      - Bourke, Mrs. John (Catherine)
+    - name: Sex
+      type: object
+      samples:
+      - male
+      - male
+      - female
+    - name: Age
+      type: float64
+      samples:
+      - 43.0
+      - 0.42
+      - .nan
+    - name: SibSp
+      type: int64
+      samples:
+      - 3
+      - 2
+      - 4
+    - name: Parch
+      type: int64
+      samples:
+      - 6
+      - 0
+      - 5
+    - name: Ticket
+      type: object
+      samples:
+      - '347060'
+      - '35273'
+      - '363294'
+    - name: Fare
+      type: float64
+      samples:
+      - 7.25
+      - 28.7125
+      - 7.6292
+    - name: Cabin
+      type: object
+      samples:
+      - .nan
+      - D21
+      - B77
+    - name: Embarked
+      type: object
+      samples:
+      - S
+      - C
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:38:49 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:38:49 [ERROR] Pipeline failed on step 3: GoogleGemini._generate_text() takes 2 positional arguments but 3 were given
+2025-04-05 14:41:43 [INFO] Question: tell me about the dataset
+2025-04-05 14:41:43 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:41:43 [INFO] Prompt ID: cfa26879-2d0c-4e57-80ff-84a9085f3516
+2025-04-05 14:41:43 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:41:43 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:41:43 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:41:43 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:41:43 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 891
+  columns: 12
+  schema:
+    fields:
+    - name: PassengerId
+      type: int64
+      samples:
+      - 78
+      - 797
+      - 400
+    - name: Survived
+      type: int64
+      samples:
+      - 1
+      - 0
+      - 1
+    - name: Pclass
+      type: int64
+      samples:
+      - 2
+      - 1
+      - 3
+    - name: Name
+      type: object
+      samples:
+      - Lefebre, Master. Henry Forbes
+      - Beckwith, Mr. Richard Leonard
+      - Stephenson, Mrs. Walter Bertram (Martha Eustis)
+    - name: Sex
+      type: object
+      samples:
+      - male
+      - female
+      - male
+    - name: Age
+      type: float64
+      samples:
+      - 3.0
+      - 44.0
+      - .nan
+    - name: SibSp
+      type: int64
+      samples:
+      - 0
+      - 2
+      - 4
+    - name: Parch
+      type: int64
+      samples:
+      - 5
+      - 3
+      - 2
+    - name: Ticket
+      type: object
+      samples:
+      - SOTON/O.Q. 3101306
+      - '364498'
+      - '36947'
+    - name: Fare
+      type: float64
+      samples:
+      - 21.6792
+      - 16.7
+      - 34.0208
+    - name: Cabin
+      type: object
+      samples:
+      - .nan
+      - A31
+      - C30
+    - name: Embarked
+      type: object
+      samples:
+      - Q
+      - C
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:41:43 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:41:43 [ERROR] Pipeline failed on step 3: GoogleGemini._generate_text() takes 2 positional arguments but 3 were given
+2025-04-05 14:45:56 [INFO] Question: tell me about the dataset
+2025-04-05 14:45:56 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:45:56 [INFO] Prompt ID: e64ebf1f-925d-44bf-aad6-88924ce560ad
+2025-04-05 14:45:56 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:45:56 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:45:56 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:45:56 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:45:56 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 891
+  columns: 12
+  schema:
+    fields:
+    - name: PassengerId
+      type: int64
+      samples:
+      - 493
+      - 23
+      - 845
+    - name: Survived
+      type: int64
+      samples:
+      - 0
+      - 1
+      - 0
+    - name: Pclass
+      type: int64
+      samples:
+      - 2
+      - 3
+      - 1
+    - name: Name
+      type: object
+      samples:
+      - Johnson, Miss. Eleanor Ileen
+      - Milling, Mr. Jacob Christian
+      - O'Dwyer, Miss. Ellen "Nellie"
+    - name: Sex
+      type: object
+      samples:
+      - male
+      - male
+      - female
+    - name: Age
+      type: float64
+      samples:
+      - .nan
+      - 1.0
+      - 52.0
+    - name: SibSp
+      type: int64
+      samples:
+      - 4
+      - 8
+      - 3
+    - name: Parch
+      type: int64
+      samples:
+      - 0
+      - 5
+      - 4
+    - name: Ticket
+      type: object
+      samples:
+      - '248740'
+      - '11753'
+      - '111428'
+    - name: Fare
+      type: float64
+      samples:
+      - 8.6625
+      - 20.25
+      - 146.5208
+    - name: Cabin
+      type: object
+      samples:
+      - A16
+      - E44
+      - .nan
+    - name: Embarked
+      type: object
+      samples:
+      - Q
+      - .nan
+      - S
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:45:56 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:45:56 [ERROR] Pipeline failed on step 3: GoogleGemini._generate_text() takes 2 positional arguments but 3 were given
+2025-04-05 14:48:40 [INFO] Question: tell me about the dataset
+
+
+2025-04-05 14:48:40 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:48:40 [INFO] Prompt ID: 3d5c9b70-1e79-4541-8686-1b9078599a51
+2025-04-05 14:48:40 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:48:40 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:48:40 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:48:40 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:48:40 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 891
+  columns: 12
+  schema:
+    fields:
+    - name: PassengerId
+      type: int64
+      samples:
+      - 244
+      - 452
+      - 609
+    - name: Survived
+      type: int64
+      samples:
+      - 0
+      - 1
+      - 0
+    - name: Pclass
+      type: int64
+      samples:
+      - 2
+      - 1
+      - 3
+    - name: Name
+      type: object
+      samples:
+      - Turpin, Mrs. William John Robert (Dorothy Ann Wonnacott)
+      - Olsen, Mr. Henry Margido
+      - Rush, Mr. Alfred George John
+    - name: Sex
+      type: object
+      samples:
+      - female
+      - female
+      - male
+    - name: Age
+      type: float64
+      samples:
+      - .nan
+      - 47.0
+      - 64.0
+    - name: SibSp
+      type: int64
+      samples:
+      - 1
+      - 5
+      - 3
+    - name: Parch
+      type: int64
+      samples:
+      - 5
+      - 6
+      - 0
+    - name: Ticket
+      type: object
+      samples:
+      - PC 17757
+      - '13214'
+      - '364846'
+    - name: Fare
+      type: float64
+      samples:
+      - 14.1083
+      - 32.5
+      - 7.6292
+    - name: Cabin
+      type: object
+      samples:
+      - .nan
+      - B19
+      - C125
+    - name: Embarked
+      type: object
+      samples:
+      - S
+      - C
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:48:40 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:48:40 [ERROR] Pipeline failed on step 3: GeminiLLM.call() takes 2 positional arguments but 3 were given
+2025-04-05 14:50:04 [INFO] Question: tell me about the dataset
+
+
+2025-04-05 14:50:04 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:50:04 [INFO] Prompt ID: 982081d5-3332-4235-8a9f-6ec024f3ceef
+2025-04-05 14:50:04 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:50:04 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:50:04 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:50:04 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:50:04 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 891
+  columns: 12
+  schema:
+    fields:
+    - name: PassengerId
+      type: int64
+      samples:
+      - 655
+      - 197
+      - 545
+    - name: Survived
+      type: int64
+      samples:
+      - 0
+      - 1
+      - 1
+    - name: Pclass
+      type: int64
+      samples:
+      - 3
+      - 1
+      - 2
+    - name: Name
+      type: object
+      samples:
+      - Sage, Miss. Dorothy Edith "Dolly"
+      - Yousif, Mr. Wazli
+      - Chapman, Mr. Charles Henry
+    - name: Sex
+      type: object
+      samples:
+      - female
+      - male
+      - male
+    - name: Age
+      type: float64
+      samples:
+      - .nan
+      - 17.0
+      - 30.5
+    - name: SibSp
+      type: int64
+      samples:
+      - 8
+      - 3
+      - 4
+    - name: Parch
+      type: int64
+      samples:
+      - 3
+      - 5
+      - 0
+    - name: Ticket
+      type: object
+      samples:
+      - '29108'
+      - C.A. 5547
+      - '347743'
+    - name: Fare
+      type: float64
+      samples:
+      - 21.0
+      - 25.9292
+      - 12.2875
+    - name: Cabin
+      type: object
+      samples:
+      - .nan
+      - C68
+      - D7
+    - name: Embarked
+      type: object
+      samples:
+      - C
+      - .nan
+      - Q
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:50:04 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:50:04 [ERROR] Pipeline failed on step 3: No code found in the response
+2025-04-05 14:50:46 [INFO] Question: tell me about the dataset
+
+
+2025-04-05 14:50:46 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:50:46 [INFO] Prompt ID: 17aec71a-61be-4195-9b79-a91ca0db3908
+2025-04-05 14:50:46 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:50:46 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:50:46 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:50:46 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:50:46 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 891
+  columns: 12
+  schema:
+    fields:
+    - name: PassengerId
+      type: int64
+      samples:
+      - 522
+      - 415
+      - 719
+    - name: Survived
+      type: int64
+      samples:
+      - 0
+      - 0
+      - 1
+    - name: Pclass
+      type: int64
+      samples:
+      - 1
+      - 3
+      - 2
+    - name: Name
+      type: object
+      samples:
+      - Turpin, Mr. William John Robert
+      - de Messemaeker, Mrs. Guillaume Joseph (Emma)
+      - Braund, Mr. Lewis Richard
+    - name: Sex
+      type: object
+      samples:
+      - female
+      - male
+      - male
+    - name: Age
+      type: float64
+      samples:
+      - 36.0
+      - 55.0
+      - .nan
+    - name: SibSp
+      type: int64
+      samples:
+      - 0
+      - 3
+      - 1
+    - name: Parch
+      type: int64
+      samples:
+      - 2
+      - 1
+      - 4
+    - name: Ticket
+      type: object
+      samples:
+      - SOTON/OQ 392082
+      - '364498'
+      - '349910'
+    - name: Fare
+      type: float64
+      samples:
+      - 146.5208
+      - 33.0
+      - 41.5792
+    - name: Cabin
+      type: object
+      samples:
+      - .nan
+      - C68
+      - D50
+    - name: Embarked
+      type: object
+      samples:
+      - S
+      - Q
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:50:46 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:50:46 [ERROR] Pipeline failed on step 3: No code found in the response
+2025-04-05 14:54:36 [INFO] Question: Generate Python code to answer the following question. Format your response as a python code block. Question: tell me about the dataset
+
+
+2025-04-05 14:54:36 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:54:36 [INFO] Prompt ID: 11979702-75ab-4fce-bae9-88ba82179dfe
+2025-04-05 14:54:36 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:54:36 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:54:36 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:54:36 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:54:36 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 891
+  columns: 12
+  schema:
+    fields:
+    - name: PassengerId
+      type: int64
+      samples:
+      - 12
+      - 86
+      - 788
+    - name: Survived
+      type: int64
+      samples:
+      - 0
+      - 1
+      - 0
+    - name: Pclass
+      type: int64
+      samples:
+      - 2
+      - 3
+      - 1
+    - name: Name
+      type: object
+      samples:
+      - Betros, Mr. Tannous
+      - Hood, Mr. Ambrose Jr
+      - Lundahl, Mr. Johan Svensson
+    - name: Sex
+      type: object
+      samples:
+      - male
+      - female
+      - female
+    - name: Age
+      type: float64
+      samples:
+      - .nan
+      - 34.0
+      - 16.0
+    - name: SibSp
+      type: int64
+      samples:
+      - 2
+      - 3
+      - 4
+    - name: Parch
+      type: int64
+      samples:
+      - 2
+      - 5
+      - 1
+    - name: Ticket
+      type: object
+      samples:
+      - '36967'
+      - '112059'
+      - '233639'
+    - name: Fare
+      type: float64
+      samples:
+      - 7.8
+      - 71.2833
+      - 9.8417
+    - name: Cabin
+      type: object
+      samples:
+      - C83
+      - .nan
+      - E8
+    - name: Embarked
+      type: object
+      samples:
+      - Q
+      - S
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Generate Python code to answer the following question. Format your response as a python code block. Question: tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:54:36 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:54:36 [ERROR] Pipeline failed on step 3: No code found in the response
+2025-04-05 14:54:58 [INFO] Question: Generate Python code to answer the following question. Format your response as a python code block. Question: tell em about he dataset
+2025-04-05 14:54:58 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:54:58 [INFO] Prompt ID: 22d02055-04c9-4fd2-b4ea-5c70466d8259
+2025-04-05 14:54:58 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:54:58 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:54:58 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:54:58 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:54:58 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 891
+  columns: 12
+  schema:
+    fields:
+    - name: PassengerId
+      type: int64
+      samples:
+      - 855
+      - 2
+      - 846
+    - name: Survived
+      type: int64
+      samples:
+      - 0
+      - 0
+      - 1
+    - name: Pclass
+      type: int64
+      samples:
+      - 3
+      - 2
+      - 1
+    - name: Name
+      type: object
+      samples:
+      - Aks, Mrs. Sam (Leah Rosen)
+      - Goodwin, Mr. Charles Edward
+      - Nasser, Mrs. Nicholas (Adele Achem)
+    - name: Sex
+      type: object
+      samples:
+      - female
+      - male
+      - male
+    - name: Age
+      type: float64
+      samples:
+      - 45.0
+      - 13.0
+      - .nan
+    - name: SibSp
+      type: int64
+      samples:
+      - 2
+      - 8
+      - 5
+    - name: Parch
+      type: int64
+      samples:
+      - 3
+      - 4
+      - 1
+    - name: Ticket
+      type: object
+      samples:
+      - '349206'
+      - '7545'
+      - '12233'
+    - name: Fare
+      type: float64
+      samples:
+      - 49.5
+      - 93.5
+      - 7.7417
+    - name: Cabin
+      type: object
+      samples:
+      - C23 C25 C27
+      - C45
+      - .nan
+    - name: Embarked
+      type: object
+      samples:
+      - S
+      - .nan
+      - Q
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Generate Python code to answer the following question. Format your response as a python code block. Question: tell em about he dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:54:58 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:54:58 [ERROR] Pipeline failed on step 3: No code found in the response
+2025-04-05 14:56:38 [INFO] Question: tell me about the dataser
+2025-04-05 14:56:38 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:56:38 [INFO] Prompt ID: edc23ab7-d834-4352-ae00-203c24c84f44
+2025-04-05 14:56:38 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:56:38 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:56:38 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:56:38 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:56:38 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+416,0,2,"Murphy, Miss. Margaret Jane",female,,2,3,PC 17609,9.475,,Q
+468,1,1,"Andersson, Master. Sigvard Harald Elias",female,19.0,8,2,2223,6.975,C87,
+596,0,3,"Goldschmidt, Mr. George B",male,2.0,5,0,PC 17592,37.0042,D50,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataser
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:56:38 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:56:39 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 14:59:11 [INFO] Question: tell me about the datasert
+2025-04-05 14:59:11 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 14:59:11 [INFO] Prompt ID: bc95e137-038b-457a-9424-b15002646b9d
+2025-04-05 14:59:11 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 14:59:11 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 14:59:11 [INFO] Executing Step 1: CacheLookup
+2025-04-05 14:59:11 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 14:59:11 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+359,0,3,"Blank, Mr. Henry",female,,4,1,349223,7.05,E44,Q
+99,1,2,"Johnson, Master. Harold Theodor",female,8.0,1,5,29751,15.75,C148,
+476,0,1,"Asplund, Master. Clarence Gustaf Hugo",male,17.0,5,2,2003,8.1583,,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the datasert
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 14:59:11 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 14:59:11 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 15:00:58 [INFO] Question: tell me about the datasert
+
+
+2025-04-05 15:00:58 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 15:00:58 [INFO] Prompt ID: 8d8b3560-8915-4eb6-a4ce-e64f7608b9f8
+2025-04-05 15:00:58 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:00:58 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:00:58 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:00:58 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:00:58 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+490,0,3,"Bjornstrom-Steffansson, Mr. Mauritz Hakan",male,,2,6,312993,37.0042,,Q
+129,0,2,"Cunningham, Mr. Alfred Fleming",female,37.0,4,4,250655,7.7417,D6,
+59,1,1,"Rosblom, Mrs. Viktor (Helena Wilhelmina)",male,70.0,5,0,370372,8.5167,C103,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the datasert
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:00:58 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:00:58 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 15:04:27 [INFO] Question: tell me about the datasert
+
+
+2025-04-05 15:04:27 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 15:04:27 [INFO] Prompt ID: fa3ec3e5-2f61-40fb-8417-cc64c1205f89
+2025-04-05 15:04:27 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:04:27 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:04:27 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:04:27 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:04:27 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+607,0,2,"Connolly, Miss. Kate",male,29.0,1,6,113760,22.3583,A31,C
+179,1,3,"Taylor, Mrs. Elmer Zebley (Juliet Cummins Wright)",female,20.5,5,5,2651,47.1,D36,
+311,0,1,"Perkin, Mr. John Henry",male,,3,3,113503,164.8667,,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the datasert
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:04:27 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:04:28 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 15:06:45 [INFO] Question: tell me about the datasert
+
+
+2025-04-05 15:06:45 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 15:06:45 [INFO] Prompt ID: 487bc888-cb93-4470-8c07-73cd123886e6
+2025-04-05 15:06:45 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:06:45 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:06:45 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:06:45 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:06:45 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+298,0,2,"Stewart, Mr. Albert A",female,61.0,2,1,P/PP 3381,52.5542,,Q
+152,1,1,"Rice, Master. Arthur",female,15.0,0,3,113510,9.825,A24,S
+694,0,3,"Collander, Mr. Erik Gustaf",male,,8,2,234818,7.225,C45,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the datasert
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:06:45 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:06:46 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 15:15:32 [INFO] Question: tell me about the dataset
+2025-04-05 15:15:32 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 15:15:32 [INFO] Prompt ID: b4cb61fd-5fea-4ba7-821b-7ed91436efa7
+2025-04-05 15:15:32 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:15:32 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:15:32 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:15:32 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:15:32 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+300,0,3,"Markoff, Mr. Marin",female,56.0,8,2,SOTON/OQ 392076,82.1708,,S
+493,1,2,"Van der hoef, Mr. Wyckoff",female,63.0,0,4,2691,113.275,C93,Q
+233,1,1,"Osen, Mr. Olaf Elon",male,,4,6,36568,9.2167,A6,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:15:32 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:15:32 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 15:20:23 [INFO] Question: tell me about the dataset
+2025-04-05 15:20:23 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 15:20:23 [INFO] Prompt ID: 5acb8d25-9d13-4033-8163-7f99efa0a1e2
+2025-04-05 15:20:23 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:20:23 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:20:23 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:20:23 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:20:23 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+94,1,2,"Nicholls, Mr. Joseph Charles",male,,8,5,C.A. 2673,20.575,B69,
+238,1,3,"Sundman, Mr. Johan Julian",female,30.0,3,1,347060,80.0,,C
+585,0,1,"Farthing, Mr. John",male,34.0,5,4,16988,8.4583,A26,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:20:23 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:20:24 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 15:30:22 [INFO] Question: tell me about the dataset
+2025-04-05 15:30:22 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 15:30:22 [INFO] Prompt ID: acd652f4-73a7-4c2f-8ad7-e2fdcf2ba111
+2025-04-05 15:30:22 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:30:22 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:30:22 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:30:22 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:30:22 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+882,0,2,"Mionoff, Mr. Stoytcho",male,13.0,2,2,36967,10.5,E25,C
+632,0,3,"Andersson, Miss. Ingeborg Constanzia",female,37.0,8,1,STON/O 2. 3101269,7.7375,D49,Q
+310,1,1,"Danbom, Mrs. Ernst Gilbert (Anna Sigrid Maria Brogren)",female,,4,5,350404,71.2833,,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:30:22 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:30:23 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 15:31:30 [INFO] Question: tell me about the dataset
+
+
+2025-04-05 15:31:30 [INFO] Running PandasAI with gemini LLM...
+2025-04-05 15:31:30 [INFO] Prompt ID: 03d31aa1-e851-4a18-8f28-38e1a6a3d2e3
+2025-04-05 15:31:30 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:31:30 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:31:30 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:31:30 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:31:30 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+265,0,2,"Goldsmith, Mrs. Frank John (Emily Alice Brown)",male,,8,4,W./C. 6608,14.4542,,
+137,1,1,"Sivic, Mr. Husein",female,42.0,3,2,C.A. 33112,39.0,B35,S
+119,0,3,"Hodges, Mr. Henry Price",female,14.0,1,6,330935,227.525,B58 B60,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:31:30 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:31:30 [ERROR] Pipeline failed on step 3: GeminiLLM.call() takes 2 positional arguments but 3 were given
+2025-04-05 15:32:48 [INFO] Question: tell me about the dataset
+
+
+2025-04-05 15:32:48 [INFO] Running PandasAI with gemini LLM...
+2025-04-05 15:32:48 [INFO] Prompt ID: aa3e15ea-abda-471c-9d56-cf02459c3917
+2025-04-05 15:32:48 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:32:48 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:32:48 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:32:48 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:32:48 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+793,1,1,"Sadlier, Mr. Matthew",female,36.0,4,4,7534,7.7333,,C
+191,0,2,"Reuchlin, Jonkheer. John George",female,,0,6,248706,69.55,F G73,Q
+408,1,3,"Eklund, Mr. Hans Linus",male,28.5,3,3,112277,13.5,A10,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:32:48 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:32:48 [ERROR] Pipeline failed on step 3: No code found in the response
+2025-04-05 15:39:43 [INFO] Question: tell me about the dataset
+
+
+2025-04-05 15:39:43 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 15:39:43 [INFO] Prompt ID: e3e00e0b-8bfc-48d3-9297-07b5e534eb2c
+2025-04-05 15:39:43 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:39:43 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:39:43 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:39:43 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:39:43 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+29,0,2,"Hoyt, Mrs. Frederick Maxfield (Jane Anne Forby)",female,,2,4,110413,21.6792,D21,
+662,1,3,"Moore, Mr. Leonard Charles",male,9.0,8,3,113767,10.5167,,S
+707,1,1,"Laleff, Mr. Kristo",male,30.0,5,1,PC 17582,15.1,B51 B53 B55,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:39:43 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:39:44 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 15:40:29 [INFO] Question: tell me about the dataset
+
+
+2025-04-05 15:40:29 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 15:40:29 [INFO] Prompt ID: 184e73c4-3eee-45bd-a1dd-67c3f7e87f0a
+2025-04-05 15:40:29 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:40:29 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:40:29 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:40:29 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:40:29 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+446,1,1,"Persson, Mr. Ernst Ulrik",male,,3,4,113043,9.475,C90,
+701,1,2,"Emanuel, Miss. Virginia Ethel",female,13.0,5,2,349247,6.4375,,C
+246,0,3,"Lam, Mr. Len",female,44.0,1,3,349215,13.0,E38,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:40:29 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:40:31 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 15:43:01 [INFO] Question: tell me about the dataset
+
+
+2025-04-05 15:43:01 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 15:43:01 [INFO] Prompt ID: 15a085e9-0363-4173-801a-979b010b5e6c
+2025-04-05 15:43:01 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 15:43:01 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 15:43:01 [INFO] Executing Step 1: CacheLookup
+2025-04-05 15:43:01 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 15:43:01 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+284,1,3,"Louch, Mrs. Charles Alexander (Alice Adelaide Slow)",female,,2,3,A/5 3594,79.2,A34,
+335,1,2,"Johnston, Mr. Andrew G",male,70.0,1,4,PC 17593,7.8875,A24,Q
+10,0,1,"Sage, Miss. Constance Gladys",male,20.5,5,6,347742,77.2875,,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 15:43:01 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 15:43:01 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 16:00:37 [INFO] Question: tell me about the dataset
+2025-04-05 16:00:37 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 16:00:37 [INFO] Prompt ID: 86acc01d-873e-4cba-8a65-e219a2dfc85e
+2025-04-05 16:00:37 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 16:00:37 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 16:00:37 [INFO] Executing Step 1: CacheLookup
+2025-04-05 16:00:37 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 16:00:37 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+167,0,2,"Danbom, Mrs. Ernst Gilbert (Anna Sigrid Maria Brogren)",female,40.5,4,2,7598,77.2875,,S
+810,0,3,"Eustis, Miss. Elizabeth Mussey",male,,2,3,SOTON/OQ 392090,6.4958,C83,
+763,1,1,"Graham, Mrs. William Thompson (Edith Junkins)",male,58.0,1,5,382651,14.4,D10 D12,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 16:00:37 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 16:00:38 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 16:12:06 [INFO] Question: tell me about the datraset
+2025-04-05 16:12:06 [INFO] Running PandasAI with openai LLM...
+2025-04-05 16:12:06 [INFO] Prompt ID: 0ee3c97f-428d-451a-94c3-0a7fad37f04b
+2025-04-05 16:12:06 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 16:12:06 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 16:12:06 [INFO] Executing Step 1: CacheLookup
+2025-04-05 16:12:06 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 16:12:07 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+312,1,2,"Dahlberg, Miss. Gerda Ulrika",female,62.0,2,1,2693,7.1417,A20,
+279,0,3,"Laroche, Miss. Simonne Marie Anne Andree",female,7.0,3,6,234604,50.0,,S
+512,0,1,"Hassan, Mr. Houssein G N",male,,4,5,31028,7.7417,C22 C26,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the datraset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 16:12:07 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 16:12:07 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: AIzaSyAr***************************MEjw. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2025-04-05 16:12:07 [ERROR] Pipeline failed on step 3: Incorrect API key provided: AIzaSyAr***************************MEjw. You can find your API key at https://platform.openai.com/account/api-keys.
+2025-04-05 16:16:06 [INFO] Question: tell me about the dataset
+2025-04-05 16:16:06 [INFO] Running PandasAI with openai LLM...
+2025-04-05 16:16:06 [INFO] Prompt ID: 61704c50-3841-4134-94d3-7c251960b882
+2025-04-05 16:16:06 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 16:16:06 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 16:16:06 [INFO] Executing Step 1: CacheLookup
+2025-04-05 16:16:06 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 16:16:06 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+816,0,3,"Ford, Mr. William Neal",male,23.0,8,2,C.A. 24580,31.0,B20,
+768,1,1,"Todoroff, Mr. Lalio",female,,2,3,4136,26.55,C49,C
+846,0,2,"Nysveen, Mr. Johan Hansen",female,30.0,1,5,SC/PARIS 2146,18.7875,,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 16:16:06 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 16:16:06 [INFO] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2025-04-05 16:16:06 [ERROR] Pipeline failed on step 3: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+2025-04-05 16:18:58 [INFO] Question: tell em about the dataset
+2025-04-05 16:18:58 [INFO] Running PandasAI with openai LLM...
+2025-04-05 16:18:58 [INFO] Prompt ID: e5c64b25-7821-448d-89a7-596e474eaa9b
+2025-04-05 16:18:58 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 16:18:58 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 16:18:58 [INFO] Executing Step 1: CacheLookup
+2025-04-05 16:18:58 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 16:18:58 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+134,0,3,"Stranden, Mr. Juho",male,29.0,5,6,113028,78.85,C124,
+853,1,1,"Lennon, Mr. Denis",male,,4,2,347085,34.0208,,C
+884,1,2,"Collyer, Mr. Harvey",female,63.0,0,5,16966,7.0542,C101,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell em about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 16:18:58 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 16:18:59 [INFO] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2025-04-05 16:18:59 [ERROR] Pipeline failed on step 3: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+2025-04-05 16:23:59 [INFO] Question: tell me about dataset
+2025-04-05 16:23:59 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 16:23:59 [INFO] Prompt ID: d7266400-a7ae-4a78-99ec-b46582b2bec5
+2025-04-05 16:23:59 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 16:23:59 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 16:23:59 [INFO] Executing Step 1: CacheLookup
+2025-04-05 16:23:59 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 16:23:59 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+434,1,3,"Calic, Mr. Petar",male,37.0,8,6,STON/O 2. 3101280,5.0,A23,
+169,1,2,"Icard, Miss. Amelie",female,,0,0,2623,8.0292,C126,C
+506,0,1,"Knight, Mr. Robert J",male,55.0,1,3,228414,6.8583,,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 16:23:59 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 16:24:00 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 16:35:23 [INFO] Question: tell em about the dsatawet
+2025-04-05 16:35:23 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 16:35:23 [INFO] Prompt ID: dea68c87-5b45-4cfb-ba3e-a1475d622fb9
+2025-04-05 16:35:23 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 16:35:23 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 16:35:23 [INFO] Executing Step 1: CacheLookup
+2025-04-05 16:35:23 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 16:35:23 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+236,0,1,"Hale, Mr. Reginald",male,0.92,3,6,13214,7.7875,E24,
+830,1,3,"Humblen, Mr. Adolf Mathias Nicolai Olsen",female,,4,2,324669,38.5,C87,C
+272,1,2,"Madill, Miss. Georgette Alexandra",male,71.0,1,1,349221,153.4625,,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell em about the dsatawet
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 16:35:23 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 16:35:23 [ERROR] Pipeline failed on step 3: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-04-05 17:31:51 [INFO] Question: tell me about he dataset
+2025-04-05 17:31:51 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 17:31:51 [INFO] Prompt ID: c441a877-8e88-4458-9c13-1d9abcaf2f9f
+2025-04-05 17:31:51 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 17:31:51 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 17:31:51 [INFO] Executing Step 1: CacheLookup
+2025-04-05 17:31:51 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 17:31:51 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+749,0,3,"Murphy, Miss. Katherine ""Kate""",female,34.5,3,0,220845,15.05,B102,
+478,1,1,"Abbott, Mr. Rossmore Edward",male,,4,6,348124,263.0,C123,Q
+238,0,2,"Sandstrom, Mrs. Hjalmar (Agnes Charlotta Bengtsson)",female,49.0,8,1,237668,12.525,,S
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about he dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 17:31:51 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 17:31:52 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 17:33:20 [INFO] Question: tell me about the dataet
+2025-04-05 17:33:20 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 17:33:20 [INFO] Prompt ID: afe1447d-8979-40d9-a579-d8d8a4378df6
+2025-04-05 17:33:20 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 17:33:20 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 17:33:20 [INFO] Executing Step 1: CacheLookup
+2025-04-05 17:33:20 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 17:33:20 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+568,1,1,"Torber, Mr. Ernst William",male,44.0,5,6,111428,15.55,B73,Q
+199,0,3,"Hedman, Mr. Oskar Arvid",female,41.0,4,3,230080,8.3625,,S
+138,1,2,"Andersson, Miss. Ellis Anna Maria",female,,8,4,350042,5.0,E67,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataet
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 17:33:20 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 17:33:21 [ERROR] Pipeline failed on step 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-04-05 17:49:10 [INFO] Question: tell me about the dataset
+2025-04-05 17:49:10 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 17:49:10 [INFO] Prompt ID: 564f7716-f106-42c0-999c-82aee4e75d0e
+2025-04-05 17:49:10 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 17:49:10 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 17:49:10 [INFO] Executing Step 1: CacheLookup
+2025-04-05 17:49:10 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 17:49:10 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+641,0,2,"Carr, Miss. Helen ""Ellen""",female,47.0,5,4,112379,8.6625,B82 B84,S
+309,1,3,"Carter, Mrs. Ernest Courtenay (Lilian Hughes)",male,,8,2,315088,33.0,,C
+774,1,1,"Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)",male,37.0,4,0,17421,120.0,C50,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 17:49:10 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 17:49:13 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+641,0,2,"Carr, Miss. Helen ""Ellen""",female,47.0,5,4,112379,8.6625,B82 B84,S
+309,1,3,"Carter, Mrs. Ernest Courtenay (Lilian Hughes)",male,,8,2,315088,33.0,,C
+774,1,1,"Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)",male,37.0,4,0,17421,120.0,C50,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ tell me about the dataset
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-05 17:49:13 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+df = dfs[0]
+result = {
+ "type": "string",
+ "value": f"The dataframe has {df.shape[0]} rows and {df.shape[1]} columns. The column names are: {', '.join(df.columns)}"
+}
+            ```
+            
+2025-04-05 17:49:13 [INFO] Executing Step 4: CachePopulation
+2025-04-05 17:49:13 [INFO] Executing Step 5: CodeCleaning
+2025-04-05 17:49:13 [INFO] 
+Code running:
+```
+df = dfs[0]
+result = {'type': 'string', 'value': f"The dataframe has {df.shape[0]} rows and {df.shape[1]} columns. The column names are: {', '.join(df.columns)}"}
+        ```
+2025-04-05 17:49:13 [INFO] Executing Step 6: CodeExecution
+2025-04-05 17:49:13 [INFO] Executing Step 7: ResultValidation
+2025-04-05 17:49:13 [INFO] Answer: {'type': 'string', 'value': 'The dataframe has 891 rows and 12 columns. The column names are: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked'}
+2025-04-05 17:49:14 [INFO] Executing Step 8: ResultParsing
+2025-04-05 17:49:31 [INFO] Question: can u tell me how many ppl survived 
+2025-04-05 17:49:31 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 17:49:31 [INFO] Prompt ID: 7793ba2a-e6e8-4286-88a6-be2efd726bd8
+2025-04-05 17:49:31 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 17:49:31 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 17:49:31 [INFO] Executing Step 1: CacheLookup
+2025-04-05 17:49:31 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 17:49:31 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+574,0,1,"McCoy, Miss. Agnes",male,14.0,5,1,54636,19.2583,C52,
+710,1,2,"Kassem, Mr. Fared",female,58.0,8,6,PC 17474,10.5167,,S
+702,0,3,"Dimic, Mr. Jovan",male,,0,4,SOTON/OQ 392089,17.8,C95,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u tell me how many ppl survived 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 17:49:31 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 17:49:34 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+574,0,1,"McCoy, Miss. Agnes",male,14.0,5,1,54636,19.2583,C52,
+710,1,2,"Kassem, Mr. Fared",female,58.0,8,6,PC 17474,10.5167,,S
+702,0,3,"Dimic, Mr. Jovan",male,,0,4,SOTON/OQ 392089,17.8,C95,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u tell me how many ppl survived 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-05 17:49:34 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+df = dfs[0]
+survived = df[df['Survived'] == 1]['Survived'].count()
+
+# Declare result var: 
+result = {
+    "type": "number",
+    "value": survived
+}
+            ```
+            
+2025-04-05 17:49:34 [INFO] Executing Step 4: CachePopulation
+2025-04-05 17:49:34 [INFO] Executing Step 5: CodeCleaning
+2025-04-05 17:49:34 [INFO] 
+Code running:
+```
+df = dfs[0]
+survived = df[df['Survived'] == 1]['Survived'].count()
+result = {'type': 'number', 'value': survived}
+        ```
+2025-04-05 17:49:34 [INFO] Executing Step 6: CodeExecution
+2025-04-05 17:49:34 [INFO] Executing Step 7: ResultValidation
+2025-04-05 17:49:34 [INFO] Answer: {'type': 'number', 'value': 342}
+2025-04-05 17:49:34 [INFO] Executing Step 8: ResultParsing
+2025-04-05 17:49:56 [INFO] Question: can u give me a graph based on genders for survived ppl
+2025-04-05 17:49:56 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 17:49:56 [INFO] Prompt ID: 3130f6ce-f61f-41eb-b9f0-1d4a8fd8bc37
+2025-04-05 17:49:56 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 17:49:56 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 17:49:56 [INFO] Executing Step 1: CacheLookup
+2025-04-05 17:49:56 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 17:49:56 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+265,1,2,"Reuchlin, Jonkheer. John George",male,42.0,4,0,112053,7.65,C103,S
+537,0,1,"Arnold-Franchi, Mrs. Josef (Josefine Franchi)",male,,2,6,113807,34.375,,
+356,1,3,"Coleff, Mr. Satio",female,40.0,0,1,17463,227.525,D47,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u give me a graph based on genders for survived ppl
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 17:49:56 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 17:50:00 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+265,1,2,"Reuchlin, Jonkheer. John George",male,42.0,4,0,112053,7.65,C103,S
+537,0,1,"Arnold-Franchi, Mrs. Josef (Josefine Franchi)",male,,2,6,113807,34.375,,
+356,1,3,"Coleff, Mr. Satio",female,40.0,0,1,17463,227.525,D47,Q
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u give me a graph based on genders for survived ppl
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-05 17:50:00 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+df = dfs[0]
+survived = df[df['Survived'] == 1]['Sex'].value_counts()
+survived.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived People by Gender')
+plt.savefig('temp_chart.png')
+
+# Declare result var: 
+result = {
+    "type": "plot",
+    "value": "temp_chart.png"
+}
+            ```
+            
+2025-04-05 17:50:00 [INFO] Executing Step 4: CachePopulation
+2025-04-05 17:50:00 [INFO] Executing Step 5: CodeCleaning
+2025-04-05 17:50:00 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Chatbot\Streamlit-Chatbot-Analytics\exports\charts\temp_chart.png
+2025-04-05 17:50:00 [INFO] 
+Code running:
+```
+df = dfs[0]
+survived = df[df['Survived'] == 1]['Sex'].value_counts()
+survived.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived People by Gender')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+        ```
+2025-04-05 17:50:00 [INFO] Executing Step 6: CodeExecution
+2025-04-05 17:50:01 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-05 17:50:01 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-05 17:50:01 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-05 17:50:01 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-05 17:50:01 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+265,1,2,"Reuchlin, Jonkheer. John George",male,42.0,4,0,112053,7.65,C103,S
+537,0,1,"Arnold-Franchi, Mrs. Josef (Josefine Franchi)",male,,2,6,113807,34.375,,
+356,1,3,"Coleff, Mr. Satio",female,40.0,0,1,17463,227.525,D47,Q
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me a graph based on genders for survived ppl
+
+You generated this python code:
+df = dfs[0]
+survived = df[df['Survived'] == 1]['Sex'].value_counts()
+survived.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Survived')
+plt.title('Number of Survived People by Gender')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-05 17:50:01 [INFO] Executing Step 1: CodeGenerator
+2025-04-05 17:50:01 [ERROR] Pipeline failed on step 1: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 59
+}
+]
+2025-04-05 17:50:01 [ERROR] Pipeline failed on step 6: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 59
+}
+]
+2025-04-05 17:50:35 [INFO] Question: can u give me the heatmap of correlation matrix of the datast
+2025-04-05 17:50:35 [INFO] Running PandasAI with google-gemini LLM...
+2025-04-05 17:50:35 [INFO] Prompt ID: df2fce8e-b161-4e12-9cc7-46666e7ec47b
+2025-04-05 17:50:35 [INFO] Executing Pipeline: GenerateChatPipeline
+2025-04-05 17:50:35 [INFO] Executing Step 0: ValidatePipelineInput
+2025-04-05 17:50:35 [INFO] Executing Step 1: CacheLookup
+2025-04-05 17:50:35 [INFO] Executing Step 2: PromptGeneration
+2025-04-05 17:50:35 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+437,1,1,"Phillips, Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")",male,,1,6,335677,9.825,D17,S
+628,0,2,"Sandstrom, Miss. Marguerite Rut",female,0.75,5,3,349253,35.5,A26,
+531,1,3,"Goodwin, Miss. Lillian Amy",male,23.0,2,4,8471,9.2167,,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u give me the heatmap of correlation matrix of the datast
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2025-04-05 17:50:35 [INFO] Executing Step 3: CodeGenerator
+2025-04-05 17:50:38 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+437,1,1,"Phillips, Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")",male,,1,6,335677,9.825,D17,S
+628,0,2,"Sandstrom, Miss. Marguerite Rut",female,0.75,5,3,349253,35.5,A26,
+531,1,3,"Goodwin, Miss. Lillian Amy",male,23.0,2,4,8471,9.2167,,C
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ can u give me the heatmap of correlation matrix of the datast
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2025-04-05 17:50:38 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Write code here
+df = dfs[0]
+corr = df.corr()
+plt.figure(figsize=(10,10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('temp_chart.png')
+
+# Declare result var: 
+result = {
+    "type": "plot",
+    "value": "temp_chart.png"
+}
+            ```
+            
+2025-04-05 17:50:38 [INFO] Executing Step 4: CachePopulation
+2025-04-05 17:50:38 [INFO] Executing Step 5: CodeCleaning
+2025-04-05 17:50:38 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Chatbot\Streamlit-Chatbot-Analytics\exports\charts\temp_chart.png
+2025-04-05 17:50:38 [INFO] 
+Code running:
+```
+df = dfs[0]
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+        ```
+2025-04-05 17:50:38 [INFO] Executing Step 6: CodeExecution
+2025-04-05 17:50:52 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2025-04-05 17:50:52 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2025-04-05 17:50:52 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-05 17:50:52 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-05 17:50:53 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+437,1,1,"Phillips, Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")",male,,1,6,335677,9.825,D17,S
+628,0,2,"Sandstrom, Miss. Marguerite Rut",female,0.75,5,3,349253,35.5,A26,
+531,1,3,"Goodwin, Miss. Lillian Amy",male,23.0,2,4,8471,9.2167,,C
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me the heatmap of correlation matrix of the datast
+
+You generated this python code:
+df = dfs[0]
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-05 17:50:53 [INFO] Executing Step 1: CodeGenerator
+2025-04-05 17:50:57 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+437,1,1,"Phillips, Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")",male,,1,6,335677,9.825,D17,S
+628,0,2,"Sandstrom, Miss. Marguerite Rut",female,0.75,5,3,349253,35.5,A26,
+531,1,3,"Goodwin, Miss. Lillian Amy",male,23.0,2,4,8471,9.2167,,C
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me the heatmap of correlation matrix of the datast
+
+You generated this python code:
+df = dfs[0]
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-05 17:50:57 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = dfs[0]
+
+# Convert columns to numeric if possible for correlation calculation
+for col in df.columns:
+    try:
+        df[col] = pd.to_numeric(df[col])
+    except:
+        pass
+
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': plt}
+            ```
+            
+2025-04-05 17:50:57 [INFO] Executing Step 2: CodeCleaning
+2025-04-05 17:50:57 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Chatbot\Streamlit-Chatbot-Analytics\exports\charts\temp_chart.png
+2025-04-05 17:50:57 [INFO] 
+Code running:
+```
+df = dfs[0]
+for col in df.columns:
+    try:
+        df[col] = pd.to_numeric(df[col])
+    except:
+        pass
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': plt}
+        ```
+2025-04-05 17:50:57 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'pandasai.safe_libs.restricted_matplotlib.RestrictedMatplotlib'> must match with type plot
+
+2025-04-05 17:50:57 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2025-04-05 17:50:57 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-05 17:50:57 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-05 17:50:57 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+437,1,1,"Phillips, Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")",male,,1,6,335677,9.825,D17,S
+628,0,2,"Sandstrom, Miss. Marguerite Rut",female,0.75,5,3,349253,35.5,A26,
+531,1,3,"Goodwin, Miss. Lillian Amy",male,23.0,2,4,8471,9.2167,,C
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me the heatmap of correlation matrix of the datast
+
+You generated this python code:
+df = dfs[0]
+for col in df.columns:
+    try:
+        df[col] = pd.to_numeric(df[col])
+    except:
+        pass
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': plt}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'pandasai.safe_libs.restricted_matplotlib.RestrictedMatplotlib'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2025-04-05 17:50:57 [INFO] Executing Step 1: CodeGenerator
+2025-04-05 17:51:02 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+437,1,1,"Phillips, Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")",male,,1,6,335677,9.825,D17,S
+628,0,2,"Sandstrom, Miss. Marguerite Rut",female,0.75,5,3,349253,35.5,A26,
+531,1,3,"Goodwin, Miss. Lillian Amy",male,23.0,2,4,8471,9.2167,,C
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me the heatmap of correlation matrix of the datast
+
+You generated this python code:
+df = dfs[0]
+for col in df.columns:
+    try:
+        df[col] = pd.to_numeric(df[col])
+    except:
+        pass
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': plt}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'pandasai.safe_libs.restricted_matplotlib.RestrictedMatplotlib'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2025-04-05 17:51:02 [INFO] Code generated:
+            ```
+            import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = dfs[0]
+for col in df.columns:
+    try:
+        df[col] = pd.to_numeric(df[col])
+    except:
+        pass
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'image-path', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+            ```
+            
+2025-04-05 17:51:02 [INFO] Executing Step 2: CodeCleaning
+2025-04-05 17:51:02 [INFO] Saving charts to D:\AUPP\AUPP Intern Project\Chatbot\Streamlit-Chatbot-Analytics\exports\charts\temp_chart.png
+2025-04-05 17:51:02 [INFO] 
+Code running:
+```
+df = dfs[0]
+for col in df.columns:
+    try:
+        df[col] = pd.to_numeric(df[col])
+    except:
+        pass
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'image-path', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+        ```
+2025-04-05 17:51:02 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type image-path
+
+2025-04-05 17:51:02 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2025-04-05 17:51:02 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2025-04-05 17:51:02 [INFO] Executing Step 0: ErrorPromptGeneration
+2025-04-05 17:51:02 [INFO] Using prompt: <dataframe>
+dfs[0]:891x12
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+437,1,1,"Phillips, Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")",male,,1,6,335677,9.825,D17,S
+628,0,2,"Sandstrom, Miss. Marguerite Rut",female,0.75,5,3,349253,35.5,A26,
+531,1,3,"Goodwin, Miss. Lillian Amy",male,23.0,2,4,8471,9.2167,,C
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ can u give me the heatmap of correlation matrix of the datast
+
+You generated this python code:
+df = dfs[0]
+for col in df.columns:
+    try:
+        df[col] = pd.to_numeric(df[col])
+    except:
+        pass
+corr = df.corr()
+plt.figure(figsize=(10, 10))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.savefig('D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png')
+result = {'type': 'image-path', 'value': 'D:/AUPP/AUPP Intern Project/Chatbot/Streamlit-Chatbot-Analytics/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type image-path
+
+
+Fix the python code above and return the new python code:
+2025-04-05 17:51:02 [INFO] Executing Step 1: CodeGenerator
+2025-04-05 17:51:03 [ERROR] Pipeline failed on step 1: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 57
+}
+]
+2025-04-05 17:51:03 [ERROR] Pipeline failed on step 6: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 57
+}
+]

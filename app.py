@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 from dotenv import load_dotenv
 from pandasai import SmartDataframe
-from pandasai.llm import GoogleGemini
+from google_gemini import GoogleGemini  
 import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
@@ -18,10 +18,10 @@ if not GEMINI_API_KEY:
     st.error("Please set GEMINI_API_KEY in your .env file")
     st.stop()
 
-# Initialize Gemini LLM with current model name
+# Initialize Gemini LLM with working model name
 llm = GoogleGemini(
     api_key=GEMINI_API_KEY,
-    model="models/gemini-1.5-pro-001",  
+    model="models/gemini-1.5-pro-001",
 )
 
 # Streamlit web app configuration
@@ -29,9 +29,9 @@ st.title("AUPPSearch")
 
 # Initialize session state
 if "conversation" not in st.session_state:
-    st.session_state.conversation = []  # List of messages
+    st.session_state.conversation = []
 if "plots" not in st.session_state:
-    st.session_state.plots = {}  # Dict to store plots with message index
+    st.session_state.plots = {}
 
 # File uploader
 uploaded_file = st.file_uploader("Upload a file (CSV, Excel, or JSON)")
@@ -54,7 +54,7 @@ if uploaded_file:
             st.write("Dataset Preview:", df.head(6))
             sdf = SmartDataframe(df, config={
                 "llm": llm,
-                "enable_cache": False  # Disable cache to avoid potential issues
+                "enable_cache": False
             })
             st.success("File loaded successfully.")
         st.write(f"File loading time: {time.time() - start_time:.2f} seconds")

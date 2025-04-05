@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 from dotenv import load_dotenv
 from pandasai import SmartDataframe
-from google_gemini import GoogleGemini
+from pandasai.llm import GoogleGemini
 import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
